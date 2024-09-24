@@ -4,10 +4,10 @@
     "uid" : "3a60055a744c5aabce4f60729abb500c",
     "name" : "Online bookstore tests",
     "statistic" : {
-      "failed" : 21,
+      "failed" : 20,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 78,
+      "passed" : 79,
       "unknown" : 0,
       "total" : 99
     }
