@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Online bookstore tests">
+    <parameter name="env" value="qa"/>
+    <parameter name="apiVersion" value="v1"/>
+
+    <test enabled="true" name="Authors tests">
+        <classes>
+            <class name="tests.AuthorsTests"/>
+        </classes>
+    </test>
+
+    <test enabled="true" name="Books tests">
+        <classes>
+            <class name="tests.BooksTests"/>
+        </classes>
+    </test>
+</suite>

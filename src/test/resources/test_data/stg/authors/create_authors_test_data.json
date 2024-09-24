@@ -1,0 +1,202 @@
+[
+  {
+    "testName": "Create a new Author with valid data",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with empty firstName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with empty lastName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": ""
+  },
+  {
+    "testName": "Create a new Author with null id",
+    "expectedStatusCode": 400,
+    "id": null,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with null book id",
+    "expectedStatusCode": 400,
+    "id": 1,
+    "idBook": null,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with null id and null book id",
+    "expectedStatusCode": 400,
+    "id": null,
+    "idBook": null,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with null firstName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": null,
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with null lastName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": null,
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with non utf-8 characters firstName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "ΩπΩ",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with non utf-8 characters lastName",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "ΩπΩ"
+  },
+  {
+    "testName": "Create a new Author with space in first name",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": " John D ",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with space in last name",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": " Doe D "
+  },
+  {
+    "testName": "Create a new Author with special characters in first name",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "!#@{}[]",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with special characters in last name",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "!#@{}[]"
+  },
+  {
+    "testName": "Create a new Author with max id value",
+    "expectedStatusCode": 200,
+    "id": 2147483647,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with over the max id value",
+    "expectedStatusCode": 400,
+    "id": 2147483648,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with negative id value",
+    "expectedStatusCode": 200,
+    "id": -1,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with min id value",
+    "expectedStatusCode": 200,
+    "id": -2147483648,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with below min id value",
+    "expectedStatusCode": 400,
+    "id": -2147483649,
+    "idBook": 1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with max book id value",
+    "expectedStatusCode": 200,
+    "id": 1,
+    "idBook": 2147483647,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with over the max book id value",
+    "expectedStatusCode": 400,
+    "id": 1,
+    "idBook": 2147483648,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with negative book id value",
+    "expectedStatusCode": 200,
+    "id": 1,
+    "idBook": -1,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with min book id value",
+    "expectedStatusCode": 200,
+    "id": 1,
+    "idBook": -2147483648,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with below min book id value",
+    "expectedStatusCode": 400,
+    "id": 1,
+    "idBook": -2147483649,
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  {
+    "testName": "Create a new Author with non existing book id",
+    "expectedStatusCode": 200,
+    "id": 1,
+    "idBook": 50000,
+    "firstName": "John",
+    "lastName": "Doe"
+  }
+]

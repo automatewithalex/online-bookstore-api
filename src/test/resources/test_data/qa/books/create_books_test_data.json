@@ -1,0 +1,142 @@
+[
+  {
+    "testName": "Create a new Book with valid data",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 1",
+    "description": "A compelling description of Book 1",
+    "pageCount": 100,
+    "excerpt": "An excerpt from Book 1",
+    "publishDate": "2024-09-24T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with empty title",
+    "expectedStatusCode": 400,
+    "id": 0,
+    "title": "",
+    "description": "A compelling description of the book",
+    "pageCount": 100,
+    "excerpt": "An excerpt from the book",
+    "publishDate": "2024-09-24T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with null title",
+    "expectedStatusCode": 400,
+    "id": 0,
+    "title": null,
+    "description": "A compelling description of the book",
+    "pageCount": 100,
+    "excerpt": "An excerpt from the book",
+    "publishDate": "2024-09-24T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with null description",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 2",
+    "description": null,
+    "pageCount": 150,
+    "excerpt": "An excerpt from Book 2",
+    "publishDate": "2024-09-25T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with empty description",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 3",
+    "description": "",
+    "pageCount": 120,
+    "excerpt": "An excerpt from Book 3",
+    "publishDate": "2024-09-26T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with null pageCount",
+    "expectedStatusCode": 400,
+    "id": 0,
+    "title": "Book 4",
+    "description": "A compelling description of Book 4",
+    "pageCount": null,
+    "excerpt": "An excerpt from Book 4",
+    "publishDate": "2024-09-27T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with 0 pageCount",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 5",
+    "description": "A compelling description of Book 5",
+    "pageCount": 0,
+    "excerpt": "An excerpt from Book 5",
+    "publishDate": "2024-09-28T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with negative pageCount",
+    "expectedStatusCode": 400,
+    "id": 0,
+    "title": "Book 6",
+    "description": "A compelling description of Book 6",
+    "pageCount": -1,
+    "excerpt": "An excerpt from Book 6",
+    "publishDate": "2024-09-29T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with null publishDate",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 7",
+    "description": "A compelling description of Book 7",
+    "pageCount": 300,
+    "excerpt": "An excerpt from Book 7",
+    "publishDate": null
+  },
+  {
+    "testName": "Create a new Book with non-UTF8 title",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "ΩπΩ",
+    "description": "A compelling description of a book",
+    "pageCount": 200,
+    "excerpt": "An excerpt from the book",
+    "publishDate": "2024-09-30T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with special characters in title",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "!@#$%^&*",
+    "description": "A compelling description of a book",
+    "pageCount": 200,
+    "excerpt": "An excerpt from the book",
+    "publishDate": "2024-10-01T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with large pageCount",
+    "expectedStatusCode": 200,
+    "id": 0,
+    "title": "Book 8",
+    "description": "A compelling description of Book 8",
+    "pageCount": 10000,
+    "excerpt": "An excerpt from Book 8",
+    "publishDate": "2024-10-02T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with over the max id value",
+    "expectedStatusCode": 400,
+    "id": 2147483648,
+    "title": "Book 9",
+    "description": "A compelling description of Book 9",
+    "pageCount": 250,
+    "excerpt": "An excerpt from Book 9",
+    "publishDate": "2024-10-03T18:50:41.722Z"
+  },
+  {
+    "testName": "Create a new Book with negative id value",
+    "expectedStatusCode": 200,
+    "id": -1,
+    "title": "Book 10",
+    "description": "A compelling description of Book 10",
+    "pageCount": 100,
+    "excerpt": "An excerpt from Book 10",
+    "publishDate": "2024-10-04T18:50:41.722Z"
+  }
+]
