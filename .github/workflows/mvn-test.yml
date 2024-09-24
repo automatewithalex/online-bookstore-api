@@ -55,4 +55,4 @@ jobs:
           cd gh-pages
           git add .
           git commit -m "Update Allure Report"
-          git push origin gh-pages
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
