@@ -1,0 +1,58 @@
+name: Run Tests and Generate Allure Report
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 23
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '23'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-maven
+
+      - name: Run tests with TestNG
+        run: mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml
+
+      - name: Generate Allure Report
+        run: mvn allure:report
+
+      - name: Upload Allure Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-results
+          path: target/allure-results
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin
+
+      - name: Deploy Allure Report to GitHub Pages
+        if: success()
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
+          git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+          rm -rf gh-pages/*
+          cp -r target/site/allure-maven-plugin/* gh-pages/
+          cd gh-pages
+          git add .
+          git commit -m "Update Allure Report"
+          git push origin gh-pages
