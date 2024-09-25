@@ -4,7 +4,7 @@ This project is an automated test suite designed for validating the **Online Boo
 
 ## Key Features
 
-- **Comprehensive API Testing**: Includes test cases for all major CRUD operations (Create, Read, Update, Delete) on both books and authors.
+- **Comprehensive API Testing**: Includes test cases for all major **CRUD** operations (Create, Read, Update, Delete) on both books and authors.
 - **Modular Structure**: Well-organized project structure separating configuration, test data, utilities, and test cases for scalability and maintainability.
 - **Data-Driven Testing**: Supports data-driven tests using external JSON files, allowing easy expansion of test cases without modifying code.
 - **Environment-Specific Configuration**: Easily configurable to run in different environments (development, staging, production) through external property files.
