@@ -5,7 +5,8 @@ import data_providers.DataProviders;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import models.requests.authors.AuthorRequest;
+import models.requests.authors.PostAuthorRequest;
+import models.requests.authors.PutAuthorRequest;
 import models.responses.authors.GetAuthorsResponse;
 import org.testng.annotations.*;
 import tests.base.BaseTest;
@@ -158,7 +159,7 @@ public class AuthorsTests extends BaseTest {
     public void testCreateNewAuthor(String testName, int expectedStatusCode, Long id, Long idBook, String firstName, String lastName) throws JsonProcessingException {
         logTestStart(logger, "POST " + testName);
 
-        AuthorRequest newAuthor = new AuthorRequest(id, idBook, firstName, lastName);
+        PostAuthorRequest newAuthor = new PostAuthorRequest(id, idBook, firstName, lastName);
 
         Response response = RestAssured.given()
                 .contentType("application/json")
@@ -201,7 +202,7 @@ public class AuthorsTests extends BaseTest {
         List<GetAuthorsResponse> getResponseAuthors = parseJsonResponseList(responseAllAuthors, GetAuthorsResponse.class);
         long newAuthorId = getResponseAuthors.getLast().getId() + 1;
 
-        AuthorRequest newAuthor = new AuthorRequest(
+        PostAuthorRequest newAuthor = new PostAuthorRequest(
                 newAuthorId,
                 expectedAuthors.getFirst().getIdBook(),
                 expectedAuthors.getFirst().getFirstName(),
@@ -226,10 +227,10 @@ public class AuthorsTests extends BaseTest {
         logResponseInfo(logger, "GET" + path, responseAuthor.getStatusCode(), responseAuthor.getTime());
         logResponseDebug(logger, "GET" + path, printPrettyJson(responseAuthor.body().asString()));
 
-        GetAuthorsResponse getResponseAuthorsLatest = parseJsonResponseObject(responseAuthor, GetAuthorsResponse.class);
-
         assertStatusCode(responseAuthor, 200, logger);
         assertResponseTime(responseAuthor, maxResponseTime, logger);
+
+        GetAuthorsResponse getResponseAuthorsLatest = parseJsonResponseObject(responseAuthor, GetAuthorsResponse.class);
         assertItemMatches(newAuthor, getResponseAuthorsLatest, logger);
 
         logTestEnd(logger, "POST Create Author with valid data persistence check");
@@ -242,7 +243,7 @@ public class AuthorsTests extends BaseTest {
     public void testUpdateAuthor(String testName, int expectedStatusCode, Long id, Long idBook, String firstName, String lastName) throws JsonProcessingException {
         logTestStart(logger, "PUT " + testName);
 
-        AuthorRequest authorRequest = new AuthorRequest(id, idBook, firstName, lastName);
+        PutAuthorRequest authorRequest = new PutAuthorRequest(id, idBook, firstName, lastName);
 
         String path = authorsEndpoint + "/" + id;
         Response response = RestAssured.given()
@@ -255,7 +256,7 @@ public class AuthorsTests extends BaseTest {
 
         if (expectedStatusCode == 200) {
             assertStatusCode(response, 200, logger);
-            assertAuthorCreated(response, authorRequest, logger);
+            assertAuthorUpdated(response, authorRequest, logger);
         } else if (expectedStatusCode == 400) {
             assertStatusCode(response, 400, logger);
             assertBadRequest(response, "One or more validation errors occurred.", 400, logger);
@@ -275,7 +276,7 @@ public class AuthorsTests extends BaseTest {
     public void testUpdateAuthorWithNonExistingID() throws IOException {
         logTestStart(logger, "PUT Authors with non existing ID");
 
-        AuthorRequest authorRequest = new AuthorRequest(
+        PutAuthorRequest authorRequest = new PutAuthorRequest(
                 expectedAuthors.getFirst().getId(),
                 expectedAuthors.getFirst().getIdBook(),
                 expectedAuthors.getFirst().getFirstName(),
@@ -293,7 +294,7 @@ public class AuthorsTests extends BaseTest {
         Response response = RestAssured.given()
                 .contentType("application/json")
                 .body(authorRequest)
-                .put();
+                .put(path);
 
         logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
         logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
@@ -314,7 +315,7 @@ public class AuthorsTests extends BaseTest {
 
         String invalidID = "invalidID";
 
-        AuthorRequest authorRequest = new AuthorRequest(
+        PutAuthorRequest authorRequest = new PutAuthorRequest(
                 expectedAuthors.getFirst().getId(),
                 expectedAuthors.getFirst().getIdBook(),
                 expectedAuthors.getFirst().getFirstName(),
@@ -353,7 +354,7 @@ public class AuthorsTests extends BaseTest {
 
         String sqlInjectionId = "' OR 1=1; --";
 
-        AuthorRequest authorRequest = new AuthorRequest(
+        PutAuthorRequest authorRequest = new PutAuthorRequest(
                 expectedAuthors.getFirst().getId(),
                 expectedAuthors.getFirst().getIdBook(),
                 expectedAuthors.getFirst().getFirstName(),
@@ -402,7 +403,7 @@ public class AuthorsTests extends BaseTest {
         List<GetAuthorsResponse> getResponseAuthors = parseJsonResponseList(responseAllAuthors, GetAuthorsResponse.class);
         long existingAuthorID = getResponseAuthors.getFirst().getId();
 
-        AuthorRequest updatedAuthor = new AuthorRequest(
+        PutAuthorRequest updatedAuthor = new PutAuthorRequest(
                 existingAuthorID,
                 getResponseAuthors.getFirst().getIdBook(),
                 "UpdatedName",
@@ -420,7 +421,7 @@ public class AuthorsTests extends BaseTest {
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
-        assertAuthorCreated(response, updatedAuthor, logger);
+        assertAuthorUpdated(response, updatedAuthor, logger);
 
         Response responseAuthor = RestAssured.given().get(path);
 

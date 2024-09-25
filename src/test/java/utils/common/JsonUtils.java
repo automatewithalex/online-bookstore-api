@@ -15,7 +15,6 @@ import java.util.List;
  */
 public class JsonUtils {
 
-    // Default path where the test data JSON files are stored
     private static final String DEFAULT_PATH = "src/test/resources/test_data/";
 
     /**

@@ -5,7 +5,8 @@ import data_providers.DataProviders;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import models.requests.books.BookRequest;
+import models.requests.books.PostBookRequest;
+import models.requests.books.PutBookRequest;
 import models.responses.books.GetBooksResponse;
 import org.testng.annotations.*;
 import tests.base.BaseTest;
@@ -170,7 +171,7 @@ public class BooksTests extends BaseTest {
     public void testCreateNewBook(String testName, int expectedStatusCode, Long id, String title, String description, int pageCount, String excerpt, String publishDate) throws JsonProcessingException {
         logTestStart(logger, "POST " + testName);
 
-        BookRequest newBook = new BookRequest(id, title, description, pageCount, excerpt, publishDate);
+        PostBookRequest newBook = new PostBookRequest(id, title, description, pageCount, excerpt, publishDate);
 
         Response response = RestAssured.given()
                 .contentType("application/json")
@@ -212,7 +213,7 @@ public class BooksTests extends BaseTest {
         List<GetBooksResponse> getResponseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
         long newBookId = getResponseBooks.getLast().getId() + 1;
 
-        BookRequest newBook = new BookRequest(
+        PostBookRequest newBook = new PostBookRequest(
                 newBookId,
                 expectedBooks.getFirst().getTitle(),
                 expectedBooks.getFirst().getDescription(),
@@ -260,12 +261,12 @@ public class BooksTests extends BaseTest {
     public void testUpdateBook(String testName, int expectedStatusCode, Long id, String title, String description, int pageCount, String excerpt, String publishDate) throws JsonProcessingException {
         logTestStart(logger, "PUT " + testName);
 
-        BookRequest BookRequest = new BookRequest(id, title, description, pageCount, excerpt, publishDate);
+        PutBookRequest bookRequest = new PutBookRequest(id, title, description, pageCount, excerpt, publishDate);
 
         String path = booksEndpoint + "/" + id;
         Response response = RestAssured.given()
                 .contentType("application/json")
-                .body(BookRequest)
+                .body(bookRequest)
                 .put(path);
 
         logResponseInfo(logger, "PUT" + booksEndpoint, response.getStatusCode(), response.getTime());
@@ -273,7 +274,7 @@ public class BooksTests extends BaseTest {
 
         if (expectedStatusCode == 200) {
             assertStatusCode(response, 200, logger);
-            assertBookCreated(response, BookRequest, logger);
+            assertBookUpdated(response, bookRequest, logger);
         } else if (expectedStatusCode == 400) {
             assertStatusCode(response, 400, logger);
             assertBadRequest(response, "One or more validation errors occurred.", 400, logger);
@@ -293,7 +294,7 @@ public class BooksTests extends BaseTest {
     public void testUpdateBookWithNonExistingID() throws IOException {
         logTestStart(logger, "PUT Books with non existing ID");
 
-        BookRequest newBook = new BookRequest(
+        PutBookRequest newBook = new PutBookRequest(
                 expectedBooks.getFirst().getId(),
                 expectedBooks.getFirst().getTitle(),
                 expectedBooks.getFirst().getDescription(),
@@ -327,7 +328,7 @@ public class BooksTests extends BaseTest {
     public void testUpdateBookWithInvalidID() throws IOException {
         logTestStart(logger, "PUT Books with invalid ID");
 
-        BookRequest newBook = new BookRequest(
+        PutBookRequest newBook = new PutBookRequest(
                 expectedBooks.getFirst().getId(),
                 expectedBooks.getFirst().getTitle(),
                 expectedBooks.getFirst().getDescription(),
@@ -367,7 +368,7 @@ public class BooksTests extends BaseTest {
     public void testUpdateBooksApiSqlInjectionInId() throws IOException {
         logTestStart(logger, "PUT Books with SQL Injection in ID");
 
-        BookRequest newBook = new BookRequest(
+        PutBookRequest newBook = new PutBookRequest(
                 expectedBooks.getFirst().getId(),
                 expectedBooks.getFirst().getTitle(),
                 expectedBooks.getFirst().getDescription(),
@@ -419,7 +420,7 @@ public class BooksTests extends BaseTest {
         List<GetBooksResponse> getResponseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
         long existingBookID = getResponseBooks.getFirst().getId();
 
-        BookRequest updatedBook = new BookRequest(
+        PutBookRequest updatedBook = new PutBookRequest(
                 existingBookID,
                 getResponseBooks.getFirst().getTitle(),
                 getResponseBooks.getFirst().getDescription(),
@@ -439,7 +440,7 @@ public class BooksTests extends BaseTest {
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
-        assertBookCreated(response, updatedBook, logger);
+        assertBookUpdated(response, updatedBook, logger);
 
         Response responseBook = RestAssured.given().get(path);
 

@@ -7,7 +7,7 @@ public class LogUtils {
     /**
      * Logs the start of a test case with its name and description.
      *
-     * @param logger     the logger instance.
+     * @param logger the logger instance.
      * @param info   the name of the test.
      */
     public static void logInfo(Logger logger, String info) {
@@ -17,10 +17,10 @@ public class LogUtils {
     /**
      * Logs the response info.
      *
-     * @param logger     the logger instance.
-     * @param endpoint   the name of the test.
+     * @param logger   the logger instance.
+     * @param endpoint the name of the test.
      * @param status   the name of the test.
-     * @param time   the name of the test.
+     * @param time     the name of the test.
      */
     public static void logResponseInfo(Logger logger, String endpoint, int status, long time) {
         logger.info("Endpoint: {} Status code: {} Response time: {}", endpoint, status, time);
@@ -29,9 +29,9 @@ public class LogUtils {
     /**
      * Logs the response body info.
      *
-     * @param logger     the logger instance.
-     * @param endpoint   the name of the test.
-     * @param body   the name of the test.
+     * @param logger   the logger instance.
+     * @param endpoint the name of the test.
+     * @param body     the name of the test.
      */
     public static void logResponseDebug(Logger logger, String endpoint, String body) {
         logger.debug("Endpoint: {}\n Response body: {}", endpoint, body);
@@ -40,8 +40,8 @@ public class LogUtils {
     /**
      * Logs the start of a test case with its name and description.
      *
-     * @param logger     the logger instance.
-     * @param testName   the name of the test.
+     * @param logger   the logger instance.
+     * @param testName the name of the test.
      */
     public static void logTestStart(Logger logger, String testName) {
         logger.info("\n ### Starting Test: {}", testName);

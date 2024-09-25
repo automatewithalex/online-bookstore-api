@@ -2,8 +2,10 @@ package utils.assertions;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.response.Response;
-import models.requests.books.BookRequest;
+import models.requests.books.PostBookRequest;
+import models.requests.books.PutBookRequest;
 import models.responses.books.PostBookResponse;
+import models.responses.books.PutBookResponse;
 import models.responses.common.BadRequestResponse;
 import org.apache.logging.log4j.Logger;
 
@@ -26,7 +28,7 @@ public class BookAssertionUtils extends AssertionsUtils {
      * @param logger   the Logger instance to log the messages.
      * @throws JsonProcessingException if the response cannot be parsed into a PostBookResponse object.
      */
-    public static void assertBookCreated(Response response, BookRequest newBook, Logger logger) throws JsonProcessingException {
+    public static void assertBookCreated(Response response, PostBookRequest newBook, Logger logger) throws JsonProcessingException {
         PostBookResponse createdBook = parseJsonResponseObject(response, PostBookResponse.class);
 
         try {
@@ -39,6 +41,32 @@ public class BookAssertionUtils extends AssertionsUtils {
             logger.info("Book creation assertion PASSED. Expected book matches the created book.");
         } catch (AssertionError e) {
             logger.error("Book creation assertion FAILED. Expected: {}, Actual: {}", newBook, createdBook);
+            throw e;
+        }
+    }
+
+    /**
+     * Asserts that the book updated by the API matches the expected details provided in the request.
+     * Logs the result and error message if the assertion fails.
+     *
+     * @param response          the Response object from the API containing the updated book details.
+     * @param updateBookRequest the BookRequest object with the expected book details.
+     * @param logger            the Logger instance to log the messages.
+     * @throws JsonProcessingException if the response cannot be parsed into a PutBookResponse object.
+     */
+    public static void assertBookUpdated(Response response, PutBookRequest updateBookRequest, Logger logger) throws JsonProcessingException {
+        PutBookResponse updatedBookResponse = parseJsonResponseObject(response, PutBookResponse.class);
+
+        try {
+            assertEquals(updatedBookResponse.getId(), updateBookRequest.getId(), "The ID does not match.");
+            assertEquals(updatedBookResponse.getTitle(), updateBookRequest.getTitle(), "The title does not match.");
+            assertEquals(updatedBookResponse.getDescription(), updateBookRequest.getDescription(), "The description does not match.");
+            assertEquals(updatedBookResponse.getPageCount(), updateBookRequest.getPageCount(), "The page count does not match.");
+            assertEquals(updatedBookResponse.getExcerpt(), updateBookRequest.getExcerpt(), "The excerpt does not match.");
+            assertEquals(updatedBookResponse.getPublishDate(), updateBookRequest.getPublishDate(), "The publish date does not match.");
+            logger.info("Book creation assertion PASSED. Expected book matches the created book.");
+        } catch (AssertionError e) {
+            logger.error("Book creation assertion FAILED. Expected: {}, Actual: {}", updateBookRequest, updatedBookResponse);
             throw e;
         }
     }

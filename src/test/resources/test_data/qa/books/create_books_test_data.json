@@ -81,7 +81,7 @@
   },
   {
     "testName": "Create a new Book with null publishDate",
-    "expectedStatusCode": 200,
+    "expectedStatusCode": 400,
     "id": 0,
     "title": "Book 7",
     "description": "A compelling description of Book 7",

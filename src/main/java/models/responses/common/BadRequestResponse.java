@@ -9,10 +9,10 @@ import java.util.List;
  * and specific validation or request errors.
  */
 public class BadRequestResponse {
-    private String type;
-    private String title;
-    private int status;
-    private String traceId;
+    protected String type;
+    protected String title;
+    protected int status;
+    protected String traceId;
     private Map<String, List<String>> errors;
 
     /**

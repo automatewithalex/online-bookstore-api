@@ -1,21 +1,21 @@
-package models.responses.authors;
+package models.requests.authors;
 
 import models.AuthorModel;
 
 import java.util.Objects;
 
-/**
- * Represents the response object for creating a new author (POST request).
- * This object contains details about the newly created author, including their ID,
- * associated book ID, first name, and last name.
- */
-public class PostAuthorResponse extends AuthorModel {
 
-    public PostAuthorResponse(Long id, Long idBook, String firstName, String lastName) {
+/**
+ * Represents a request to create or update an author entity.
+ * Contains the author's ID, associated book ID, first name, and last name.
+ */
+public class PostAuthorRequest extends AuthorModel {
+
+    public PostAuthorRequest(Long id, Long idBook, String firstName, String lastName) {
         super(id, idBook, firstName, lastName);
     }
 
-    public PostAuthorResponse() {
+    public PostAuthorRequest() {
     }
 
     /**
@@ -28,7 +28,7 @@ public class PostAuthorResponse extends AuthorModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PostAuthorResponse that = (PostAuthorResponse) o;
+        PostAuthorRequest that = (PostAuthorRequest) o;
         return Objects.equals(id, that.id) &&
                 Objects.equals(idBook, that.idBook) &&
                 Objects.equals(firstName, that.firstName) &&
@@ -36,14 +36,13 @@ public class PostAuthorResponse extends AuthorModel {
     }
 
     /**
-     * Returns a string representation of the PostAuthorResponse object.
-     * Provides a formatted string with the author's ID, book ID, first name, and last name.
+     * Returns a string representation of the AuthorRequest object.
      *
-     * @return a string representing the PostAuthorResponse object.
+     * @return a string representing the author's request details.
      */
     @Override
     public String toString() {
-        return String.format("PostAuthorResponse{id=%d, idBook=%d, firstName='%s', lastName='%s'}",
+        return String.format("PostAuthorRequest{id=%d, idBook=%d, firstName='%s', lastName='%s'}",
                 id, idBook, firstName, lastName);
     }
 

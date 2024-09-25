@@ -91,7 +91,7 @@
   },
   {
     "testName": "Update existing Book with null publishDate",
-    "expectedStatusCode": 200,
+    "expectedStatusCode": 400,
     "id": 2,
     "title": "Book 2",
     "description": "A compelling description of Book 2",

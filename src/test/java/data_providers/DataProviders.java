@@ -19,7 +19,6 @@ import java.util.function.Function;
  */
 public class DataProviders extends BaseTest {
 
-    // Base path for test data files, fetched from configuration
     private static final String PATH = ConfigManager.getPathProperty("test.data.provider");
     private static final String env = ConfigManager.getEnv();
 
@@ -84,7 +83,7 @@ public class DataProviders extends BaseTest {
         ObjectMapper objectMapper = new ObjectMapper();
         List<Map<String, Object>> dataList = objectMapper.readValue(
                 new File(filePath),
-                new TypeReference<List<Map<String, Object>>>() {
+                new TypeReference<>() {
                 }
         );
 
@@ -125,7 +124,7 @@ public class DataProviders extends BaseTest {
                 getLongValue(data, "id"),
                 data.get("title"),
                 data.get("description"),
-                getIntValue(data, "pageCount"),
+                getIntValue(data),
                 data.get("excerpt"),
                 data.get("publishDate")
         };
@@ -147,11 +146,10 @@ public class DataProviders extends BaseTest {
      * Helper method to safely extract an integer value from a Map.
      *
      * @param data the Map containing the test data.
-     * @param key  the key for the integer value.
      * @return the integer value or 0 if the value is null.
      */
-    private int getIntValue(Map<String, Object> data, String key) {
-        return data.get(key) != null ? ((Number) data.get(key)).intValue() : 0;
+    private int getIntValue(Map<String, Object> data) {
+        return data.get("pageCount") != null ? ((Number) data.get("pageCount")).intValue() : 0;
     }
 
 }

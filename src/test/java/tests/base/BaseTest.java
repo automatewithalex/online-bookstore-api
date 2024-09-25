@@ -48,7 +48,6 @@ public class BaseTest {
     /**
      * Loads configuration for the given environment.
      * This method fetches and loads the necessary properties for the provided environment.
-     *
      */
     private void loadConfig() {
         ConfigManager.loadApiProperties();
@@ -102,8 +101,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         logInfo(logger, "Initializing tear down");
-        // Clean up after all tests (optional)
-        // For example, closing database connections or resetting configurations
         logInfo(logger, "Tear down completed");
     }
 

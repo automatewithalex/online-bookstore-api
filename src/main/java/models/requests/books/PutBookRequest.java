@@ -1,21 +1,21 @@
-package models.responses.books;
+package models.requests.books;
 
 import models.BookModel;
 
 import java.util.Objects;
 
-/**
- * Represents the response object for creating a new book (POST request).
- * This object contains details about the newly created book, including its ID,
- * title, description, page count, excerpt, and publish date.
- */
-public class PostBookResponse extends BookModel {
 
-    public PostBookResponse(Long id, String title, String description, int pageCount, String excerpt, String publishDate) {
+/**
+ * Represents the request object for creating or updating a book.
+ * This class contains details about a book, including its ID, title, description, page count, excerpt, and publish date.
+ */
+public class PutBookRequest extends BookModel {
+
+    public PutBookRequest(Long id, String title, String description, int pageCount, String excerpt, String publishDate) {
         super(id, title, description, pageCount, excerpt, publishDate);
     }
 
-    public PostBookResponse() {
+    public PutBookRequest() {
     }
 
     /**
@@ -29,7 +29,7 @@ public class PostBookResponse extends BookModel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PostBookResponse that = (PostBookResponse) o;
+        PutBookRequest that = (PutBookRequest) o;
         return pageCount == that.pageCount &&
                 Objects.equals(id, that.id) &&
                 Objects.equals(title, that.title) &&
@@ -39,14 +39,14 @@ public class PostBookResponse extends BookModel {
     }
 
     /**
-     * Returns a string representation of the PostBookResponse object.
+     * Returns a string representation of the BookRequest object.
      * Provides a formatted string with the book's ID, title, description, page count, excerpt, and publish date.
      *
-     * @return a string representing the PostBookResponse object.
+     * @return a string representing the BookRequest object.
      */
     @Override
     public String toString() {
-        return String.format("PostBookResponse{id=%d, title='%s', description='%s', pageCount=%d, excerpt='%s', publishDate='%s'}",
+        return String.format("PutBookRequest{id=%d, title='%s', description='%s', pageCount=%d, excerpt='%s', publishDate='%s'}",
                 id, title, description, pageCount, excerpt, publishDate);
     }
 

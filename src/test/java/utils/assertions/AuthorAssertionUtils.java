@@ -2,7 +2,9 @@ package utils.assertions;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.restassured.response.Response;
-import models.requests.authors.AuthorRequest;
+import models.requests.authors.PostAuthorRequest;
+import models.requests.authors.PutAuthorRequest;
+import models.responses.authors.PutAuthorResponse;
 import models.responses.common.BadRequestResponse;
 import models.responses.authors.PostAuthorResponse;
 import org.apache.logging.log4j.Logger;
@@ -26,7 +28,7 @@ public class AuthorAssertionUtils extends AssertionsUtils {
      * @param logger    the Logger instance to log the messages.
      * @throws JsonProcessingException if the response cannot be parsed into a PostAuthorResponse object.
      */
-    public static void assertAuthorCreated(Response response, AuthorRequest newAuthor, Logger logger) throws JsonProcessingException {
+    public static void assertAuthorCreated(Response response, PostAuthorRequest newAuthor, Logger logger) throws JsonProcessingException {
         PostAuthorResponse createdAuthor = parseJsonResponseObject(response, PostAuthorResponse.class);
 
         try {
@@ -37,6 +39,30 @@ public class AuthorAssertionUtils extends AssertionsUtils {
             logger.info("Author creation assertion PASSED. Expected author matches the created author.");
         } catch (AssertionError e) {
             logger.error("Author creation assertion FAILED. Expected: {}, Actual: {}", newAuthor, createdAuthor);
+            throw e;
+        }
+    }
+
+    /**
+     * Asserts that the author updated by the API matches the expected details provided in the request.
+     * Logs the result and error message if the assertion fails.
+     *
+     * @param response            the Response object from the API containing the created author details.
+     * @param updateAuthorRequest the AuthorRequest object with the expected author details.
+     * @param logger              the Logger instance to log the messages.
+     * @throws JsonProcessingException if the response cannot be parsed into a PutAuthorResponse object.
+     */
+    public static void assertAuthorUpdated(Response response, PutAuthorRequest updateAuthorRequest, Logger logger) throws JsonProcessingException {
+        PutAuthorResponse updatedAuthorResponse = parseJsonResponseObject(response, PutAuthorResponse.class);
+
+        try {
+            assertEquals(updatedAuthorResponse.getId(), updateAuthorRequest.getId(), "The ID does not match.");
+            assertEquals(updatedAuthorResponse.getIdBook(), updateAuthorRequest.getIdBook(), "The book ID does not match.");
+            assertEquals(updatedAuthorResponse.getFirstName(), updateAuthorRequest.getFirstName(), "The first name does not match.");
+            assertEquals(updatedAuthorResponse.getLastName(), updateAuthorRequest.getLastName(), "The last name does not match.");
+            logger.info("Author update assertion PASSED. Expected author matches the updated author.");
+        } catch (AssertionError e) {
+            logger.error("Author update assertion FAILED. Expected: {}, Actual: {}", updateAuthorRequest, updatedAuthorResponse);
             throw e;
         }
     }
