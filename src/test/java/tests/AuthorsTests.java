@@ -39,8 +39,8 @@ public class AuthorsTests extends BaseTest {
 
         Response response = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(response.body().asString()));
 
         List<GetAuthorsResponse> responseAuthors = parseJsonResponseList(response, GetAuthorsResponse.class);
         List<GetAuthorsResponse> missingAuthors = findMissingObjects(expectedAuthors, responseAuthors);
@@ -64,8 +64,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + expectedAuthors.getFirst().getId();
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         GetAuthorsResponse responseAuthor = parseJsonResponseObject(response, GetAuthorsResponse.class);
 
@@ -86,8 +86,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/0000";
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -107,8 +107,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + invalidID;
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -134,8 +134,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + sqlInjectionId;
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -165,8 +165,8 @@ public class AuthorsTests extends BaseTest {
                 .body(newAuthor)
                 .post(authorsEndpoint);
 
-        logResponseInfo(logger, "POST /" + authorsEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "POST /" + authorsEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "POST" + authorsEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST" + authorsEndpoint, printPrettyJson(response.body().asString()));
 
         assertResponseTime(response, maxResponseTime, logger);
 
@@ -192,8 +192,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAllAuthors = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
 
         assertStatusCode(responseAllAuthors, 200, logger);
         assertResponseTime(responseAllAuthors, maxResponseTime, logger);
@@ -213,8 +213,8 @@ public class AuthorsTests extends BaseTest {
                 .body(newAuthor)
                 .post(authorsEndpoint);
 
-        logResponseInfo(logger, "POST /" + authorsEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "POST /" + authorsEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "POST" + authorsEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST" + authorsEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -223,8 +223,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + newAuthorId;
         Response responseAuthor = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, responseAuthor.getStatusCode(), responseAuthor.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(responseAuthor.body().asString()));
+        logResponseInfo(logger, "GET" + path, responseAuthor.getStatusCode(), responseAuthor.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(responseAuthor.body().asString()));
 
         GetAuthorsResponse getResponseAuthorsLatest = parseJsonResponseObject(responseAuthor, GetAuthorsResponse.class);
 
@@ -250,8 +250,8 @@ public class AuthorsTests extends BaseTest {
                 .body(authorRequest)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         if (expectedStatusCode == 200) {
             assertStatusCode(response, 200, logger);
@@ -284,8 +284,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAllAuthors = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
 
         List<GetAuthorsResponse> responseAuthors = parseJsonResponseList(responseAllAuthors, GetAuthorsResponse.class);
 
@@ -295,8 +295,8 @@ public class AuthorsTests extends BaseTest {
                 .body(authorRequest)
                 .put();
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -327,8 +327,8 @@ public class AuthorsTests extends BaseTest {
                 .body(authorRequest)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -366,8 +366,8 @@ public class AuthorsTests extends BaseTest {
                 .body(authorRequest)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -393,8 +393,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAllAuthors = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
 
         assertStatusCode(responseAllAuthors, 200, logger);
         assertResponseTime(responseAllAuthors, maxResponseTime, logger);
@@ -415,8 +415,8 @@ public class AuthorsTests extends BaseTest {
                 .body(updatedAuthor)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -424,8 +424,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAuthor = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + path, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(responseAllAuthors.body().asString()));
 
 
         assertStatusCode(responseAuthor, 200, logger);
@@ -447,8 +447,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAllAuthors = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
 
         assertStatusCode(responseAllAuthors, 200, logger);
         assertResponseTime(responseAllAuthors, maxResponseTime, logger);
@@ -459,16 +459,16 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + existingAuthorID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
 
         Response responseAuthor = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + path, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(responseAllAuthors.body().asString()));
 
         assertStatusCode(responseAuthor, 404, logger);
         assertResponseTime(responseAuthor, maxResponseTime, logger);
@@ -487,8 +487,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + invalidID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -514,8 +514,8 @@ public class AuthorsTests extends BaseTest {
 
         Response responseAllAuthors = RestAssured.given().get(authorsEndpoint);
 
-        logResponseInfo(logger, "GET /" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
-        logResponseDebug(logger, "GET /" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
+        logResponseInfo(logger, "GET" + authorsEndpoint, responseAllAuthors.getStatusCode(), responseAllAuthors.getTime());
+        logResponseDebug(logger, "GET" + authorsEndpoint, printPrettyJson(responseAllAuthors.body().asString()));
 
         assertStatusCode(responseAllAuthors, 200, logger);
         assertResponseTime(responseAllAuthors, maxResponseTime, logger);
@@ -526,8 +526,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + nonExistentID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -547,8 +547,8 @@ public class AuthorsTests extends BaseTest {
         String path = authorsEndpoint + "/" + sqlInjectionId;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);

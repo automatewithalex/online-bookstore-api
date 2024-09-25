@@ -41,8 +41,8 @@ public class BooksTests extends BaseTest {
 
         Response response = RestAssured.given().get(booksEndpoint);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -68,8 +68,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + expectedBooks.getFirst().getId();
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -90,8 +90,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/0000";
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -111,8 +111,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + invalidID;
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -138,8 +138,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + sqlInjectionId;
         Response response = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "GET" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -177,8 +177,8 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .post(booksEndpoint);
 
-        logResponseInfo(logger, "POST /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "POST /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "POST" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertResponseTime(response, maxResponseTime, logger);
 
@@ -203,8 +203,8 @@ public class BooksTests extends BaseTest {
 
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseAllBooks, 200, logger);
         assertResponseTime(responseAllBooks, maxResponseTime, logger);
@@ -226,8 +226,8 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .post(booksEndpoint);
 
-        logResponseInfo(logger, "POST /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "POST /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "POST" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -236,8 +236,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + newBookId;
         Response responseBook = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseBook, 200, logger);
         assertResponseTime(responseBook, maxResponseTime, logger);
@@ -268,8 +268,8 @@ public class BooksTests extends BaseTest {
                 .body(BookRequest)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         if (expectedStatusCode == 200) {
             assertStatusCode(response, 200, logger);
@@ -310,8 +310,8 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .put(booksEndpoint + "/" + (responseBooks.getLast().getId() + 1));
 
-        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -343,8 +343,8 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -383,8 +383,8 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -410,8 +410,8 @@ public class BooksTests extends BaseTest {
 
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseAllBooks, 200, logger);
         assertResponseTime(responseAllBooks, maxResponseTime, logger);
@@ -434,8 +434,8 @@ public class BooksTests extends BaseTest {
                 .body(updatedBook)
                 .put(path);
 
-        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "PUT" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -443,8 +443,8 @@ public class BooksTests extends BaseTest {
 
         Response responseBook = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseBook, 200, logger);
         assertResponseTime(responseBook, maxResponseTime, logger);
@@ -465,8 +465,8 @@ public class BooksTests extends BaseTest {
 
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseAllBooks, 200, logger);
         assertResponseTime(responseAllBooks, maxResponseTime, logger);
@@ -477,16 +477,16 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + existingBookID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(response, 200, logger);
         assertResponseTime(response, maxResponseTime, logger);
 
         Response responseBook = RestAssured.given().get(path);
 
-        logResponseInfo(logger, "GET /" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + path, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + path, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseBook, 404, logger);
         assertResponseTime(responseBook, maxResponseTime, logger);
@@ -506,8 +506,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + invalidID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -532,8 +532,8 @@ public class BooksTests extends BaseTest {
 
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
-        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+        logResponseInfo(logger, "GET" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
 
         assertStatusCode(responseAllBooks, 200, logger);
         assertResponseTime(responseAllBooks, maxResponseTime, logger);
@@ -544,8 +544,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + nonExistentID;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 404, logger);
         assertResponseTime(response, maxResponseTime, logger);
@@ -565,8 +565,8 @@ public class BooksTests extends BaseTest {
         String path = booksEndpoint + "/" + sqlInjectionId;
         Response response = RestAssured.given().delete(path);
 
-        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
-        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
+        logResponseInfo(logger, "DELETE" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE" + path, printPrettyJson(response.body().asString()));
 
         assertStatusCode(response, 400, logger);
         assertResponseTime(response, maxResponseTime, logger);
