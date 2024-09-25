@@ -1,0 +1,125 @@
+{
+  "uid" : "7e74bc315394cab5",
+  "name" : "Validates that the authors API response code is 404 and response details are as expected",
+  "fullName" : "tests.AuthorsTests.testAuthorsApiGetByNonExistentID",
+  "historyId" : "2f76e35bbaabef3eed227f5f3673ab7f",
+  "time" : {
+    "start" : 1727270776060,
+    "stop" : 1727270776407,
+    "duration" : 347
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727270773976,
+      "stop" : 1727270774238,
+      "duration" : 262
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupAuthorsTestConfig",
+    "time" : {
+      "start" : 1727270774240,
+      "stop" : 1727270774337,
+      "duration" : 97
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727270797101,
+      "stop" : 1727270797101,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testAuthorsApiGetByNonExistentID"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Authors tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az770-983"
+  }, {
+    "name" : "thread",
+    "value" : "1838@fv-az770-983.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-002"
+  }, {
+    "name" : "epic",
+    "value" : "Authors Management"
+  }, {
+    "name" : "feature",
+    "value" : "Get Author"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7e74bc315394cab5.json",
+  "parameterValues" : [ "v1", "qa" ]
+}

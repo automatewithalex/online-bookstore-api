@@ -1,990 +1,990 @@
 [ {
-  "uid" : "d1828257399634e3",
-  "name" : "Validates that the authors API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221824973,
-    "stop" : 1727221825714,
-    "duration" : 741
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "4c8f1924e3a4f04a",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221834822,
-    "stop" : 1727221835156,
-    "duration" : 334
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "a26c8e922693e289",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221821370,
-    "stop" : 1727221821680,
-    "duration" : 310
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "eb40ba3b87ccb901",
-  "name" : "Validates that the Books API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221844219,
-    "stop" : 1727221845627,
-    "duration" : 1408
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "38240aa50fb566ef",
+  "uid" : "afbcdcc55016dd37",
   "name" : "Updates Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221839573,
-    "stop" : 1727221839896,
-    "duration" : 323
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5db791ac89741dec",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221823333,
-    "stop" : 1727221823662,
-    "duration" : 329
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ae6bed6ca3a381c9",
-  "name" : "Validates that the Books API is persisting Books",
-  "time" : {
-    "start" : 1727221837079,
-    "stop" : 1727221838923,
-    "duration" : 1844
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "8498c237317e238f",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221819097,
-    "stop" : 1727221819426,
-    "duration" : 329
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "2f1fa376cfaf4b30",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221820731,
-    "stop" : 1727221821055,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "77c49fe50f94d1b2",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221832513,
-    "stop" : 1727221832881,
-    "duration" : 368
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "379fa961bd7748a3",
-  "name" : "Validates that the authors API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221824638,
-    "stop" : 1727221824971,
-    "duration" : 333
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fa610910eadeee8e",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221813303,
-    "stop" : 1727221813642,
-    "duration" : 339
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "745489218e60154e",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221821057,
-    "stop" : 1727221821368,
-    "duration" : 311
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a5de578befbd91f2",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221812646,
-    "stop" : 1727221812973,
-    "duration" : 327
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8f594e543ac00b50",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221816004,
-    "stop" : 1727221816363,
-    "duration" : 359
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "db081bd794aed43b",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221816693,
-    "stop" : 1727221817011,
+    "start" : 1727270806514,
+    "stop" : 1727270806832,
     "duration" : 318
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "ffc0636fed5e7b21",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221824297,
-    "stop" : 1727221824636,
-    "duration" : 339
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "639bc214ad59721a",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221841258,
-    "stop" : 1727221841582,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5a1c8eee168c18bf",
+  "uid" : "7a971ee56f56a1bc",
   "name" : "Creates a new author and validates the response and status code.",
   "time" : {
-    "start" : 1727221812294,
-    "stop" : 1727221812644,
-    "duration" : 350
+    "start" : 1727270780085,
+    "stop" : 1727270780440,
+    "duration" : 355
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "a1dffcaeae3c7040",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221814357,
-    "stop" : 1727221814703,
-    "duration" : 346
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c1564aa39d3578c4",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221834495,
-    "stop" : 1727221834819,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1017a70171e61783",
-  "name" : "Validates that the Books API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221849918,
-    "stop" : 1727221851209,
-    "duration" : 1291
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "fc26c1f6d8eea5c9",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221819754,
-    "stop" : 1727221820075,
-    "duration" : 321
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "83f764ad695848ce",
-  "name" : "Validates that the books API response contains all expected book details.",
-  "time" : {
-    "start" : 1727221831021,
-    "stop" : 1727221831421,
-    "duration" : 400
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "5ef6139781d11628",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221832884,
-    "stop" : 1727221833214,
-    "duration" : 330
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "fe0a3fc4e5858b88",
+  "uid" : "eb1b05b25f1271e7",
   "name" : "Updates Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221843233,
-    "stop" : 1727221843553,
-    "duration" : 320
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "65c8d071d0ab4dd5",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221842907,
-    "stop" : 1727221843231,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6d2b698784cd1ab4",
-  "name" : "Validates that the delete authors API response code is 400 for an invalid ID and response details are as expected",
-  "time" : {
-    "start" : 1727221828189,
-    "stop" : 1727221828511,
-    "duration" : 322
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "63aeb7baf68a74a8",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221839264,
-    "stop" : 1727221839571,
-    "duration" : 307
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "9eb911a6abfe6841",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221841584,
-    "stop" : 1727221841903,
-    "duration" : 319
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "ad559a4f85949878",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221842261,
-    "stop" : 1727221842576,
-    "duration" : 315
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "506962a6867f2b3e",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221836110,
-    "stop" : 1727221836444,
-    "duration" : 334
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a2fbfdb95cb16fc3",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221812975,
-    "stop" : 1727221813301,
-    "duration" : 326
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "67af3c249df1396d",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221820077,
-    "stop" : 1727221820393,
-    "duration" : 316
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "36c175d808f522b9",
-  "name" : "Validates that the authors API response contains all expected authors and does not have any duplicates.",
-  "time" : {
-    "start" : 1727221808510,
-    "stop" : 1727221809029,
-    "duration" : 519
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e8f8930744cc842b",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221833541,
-    "stop" : 1727221833859,
-    "duration" : 318
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ce293fce87ba43a1",
-  "name" : "Validates that the delete Book API response deletes an Book",
-  "time" : {
-    "start" : 1727221847786,
-    "stop" : 1727221849584,
-    "duration" : 1798
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "5973c28fa128d8e0",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221822682,
-    "stop" : 1727221823010,
-    "duration" : 328
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "af1bc2dfc68009ff",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221811615,
-    "stop" : 1727221811943,
-    "duration" : 328
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "894e23f82d666c13",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221823664,
-    "stop" : 1727221823978,
-    "duration" : 314
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d9d3eb9fa28a6173",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221835159,
-    "stop" : 1727221835483,
-    "duration" : 324
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "fbdfbe040fa810e7",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221815043,
-    "stop" : 1727221815364,
-    "duration" : 321
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "47332ace57ac3b3",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221833218,
-    "stop" : 1727221833538,
-    "duration" : 320
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "9f3df045bb8eb983",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221835796,
-    "stop" : 1727221836108,
+    "start" : 1727270810025,
+    "stop" : 1727270810337,
     "duration" : 312
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5c605013433dbc6c",
+  "uid" : "1352dc9ceb6471fd",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270778005,
+    "stop" : 1727270778355,
+    "duration" : 350
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9bdf78bc9416d7fd",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270784985,
+    "stop" : 1727270785305,
+    "duration" : 320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7f1bb5298d4a0778",
   "name" : "Creates a new Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221835486,
-    "stop" : 1727221835793,
-    "duration" : 307
+    "start" : 1727270803169,
+    "stop" : 1727270803507,
+    "duration" : 338
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "7099a65b3a1b601",
-  "name" : "Updates author and validates the response and status code.",
+  "uid" : "272f24d800124f51",
+  "name" : "Validates that the authors API response is handling non existing ID values",
   "time" : {
-    "start" : 1727221820395,
-    "stop" : 1727221820729,
-    "duration" : 334
+    "start" : 1727270792512,
+    "stop" : 1727270793240,
+    "duration" : 728
   },
-  "status" : "passed",
+  "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "4663d833e8957075",
-  "name" : "Updates author and validates the response and status code.",
+  "uid" : "19d02dae90cab351",
+  "name" : "Validates that the authors API is persisting authors",
   "time" : {
-    "start" : 1727221823979,
-    "stop" : 1727221824295,
-    "duration" : 316
+    "start" : 1727270785645,
+    "stop" : 1727270786713,
+    "duration" : 1068
   },
-  "status" : "passed",
+  "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "59b039502cbe2ee2",
+  "uid" : "7bc03f0c2a0737e",
   "name" : "Updates Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221840927,
-    "stop" : 1727221841256,
+    "start" : 1727270808118,
+    "stop" : 1727270808437,
+    "duration" : 319
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4d43c9fe97e3a8b1",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270802532,
+    "stop" : 1727270802849,
+    "duration" : 317
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "564337d27c9f3d51",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270801856,
+    "stop" : 1727270802177,
+    "duration" : 321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fed017228869fc48",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270785306,
+    "stop" : 1727270785638,
+    "duration" : 332
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b0aefea829a9d75d",
+  "name" : "Validates that the authors API response is handling non existing ID values",
+  "time" : {
+    "start" : 1727270796035,
+    "stop" : 1727270796767,
+    "duration" : 732
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a8b09b1aac812837",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270806834,
+    "stop" : 1727270807147,
+    "duration" : 313
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "650b418a5ec0b1d9",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270791540,
+    "stop" : 1727270791866,
+    "duration" : 326
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "58d011b46e71784a",
+  "name" : "Validates that the authors API response contains all expected authors and does not have any duplicates.",
+  "time" : {
+    "start" : 1727270776410,
+    "stop" : 1727270776898,
+    "duration" : 488
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "297db2e37f6f178f",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270787357,
+    "stop" : 1727270787677,
+    "duration" : 320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a0b02b6600078e0",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270786720,
+    "stop" : 1727270787035,
+    "duration" : 315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c0a6f8b37a37cde1",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270783663,
+    "stop" : 1727270783985,
+    "duration" : 322
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a7755f9a62394237",
+  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
+  "time" : {
+    "start" : 1727270796770,
+    "stop" : 1727270797099,
     "duration" : 329
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e5cd4ed37afe2d86",
-  "name" : "Updates author and validates the response and status code.",
+  "uid" : "13d6ed32f7877e7c",
+  "name" : "Validates that the authors API response contains all expected author details.",
   "time" : {
-    "start" : 1727221819428,
-    "stop" : 1727221819752,
-    "duration" : 324
+    "start" : 1727270774365,
+    "stop" : 1727270775640,
+    "duration" : 1275
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "9bd8b58dff96f3b6",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221815681,
-    "stop" : 1727221816002,
-    "duration" : 321
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d63d79ec5ae9f657",
+  "uid" : "c97432c46dfbba8e",
   "name" : "Creates a new Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221836762,
-    "stop" : 1727221837078,
+    "start" : 1727270804186,
+    "stop" : 1727270804498,
+    "duration" : 312
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "71629868cce6c4a0",
+  "name" : "Validates that the delete Book API response deletes an Book",
+  "time" : {
+    "start" : 1727270814624,
+    "stop" : 1727270816403,
+    "duration" : 1779
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ae2efe4c7ca955c",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270788644,
+    "stop" : 1727270788960,
     "duration" : 316
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "849752d8a1fc02a6",
+  "uid" : "52938912f0d0d119",
   "name" : "Creates a new Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221834183,
-    "stop" : 1727221834493,
+    "start" : 1727270800252,
+    "stop" : 1727270800571,
+    "duration" : 319
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "c5bfad8bfb02296",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270799925,
+    "stop" : 1727270800249,
+    "duration" : 324
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8580f6cefec9b06e",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270803509,
+    "stop" : 1727270803819,
     "duration" : 310
   },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7932b4ee6c46017f",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270801531,
+    "stop" : 1727270801853,
+    "duration" : 322
+  },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "89424df795708903",
-  "name" : "Validates that the delete author API response deletes an author",
+  "uid" : "a4a4c6a2d4656b6",
+  "name" : "Updates Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221827124,
-    "stop" : 1727221828187,
-    "duration" : 1063
+    "start" : 1727270810660,
+    "stop" : 1727270810976,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8ab7f8327c2a0018",
+  "name" : "Validates that the update authors API is persisting authors",
+  "time" : {
+    "start" : 1727270793562,
+    "stop" : 1727270794630,
+    "duration" : 1068
   },
   "status" : "failed",
   "severity" : "normal"
 }, {
-  "uid" : "f46ac3a041b66bd2",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221815366,
-    "stop" : 1727221815679,
-    "duration" : 313
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "26a314ad458b5805",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221816365,
-    "stop" : 1727221816692,
-    "duration" : 327
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8be5132a3988ff2",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221814706,
-    "stop" : 1727221815041,
-    "duration" : 335
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a616a2d73fbe8480",
+  "uid" : "a8d5d47e346ae54e",
   "name" : "Updates author and validates the response and status code.",
   "time" : {
-    "start" : 1727221821681,
-    "stop" : 1727221822001,
-    "duration" : 320
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "82c130bd96da85a0",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221817335,
-    "stop" : 1727221817658,
+    "start" : 1727270788319,
+    "stop" : 1727270788642,
     "duration" : 323
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e3ef433a4faa449",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221840216,
-    "stop" : 1727221840549,
-    "duration" : 333
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "750543ba9a274bf7",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221813985,
-    "stop" : 1727221814354,
-    "duration" : 369
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6ae8c68a907e6813",
+  "uid" : "ef2d76323429acc7",
   "name" : "Creates a new Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221836446,
-    "stop" : 1727221836760,
-    "duration" : 314
+    "start" : 1727270803822,
+    "stop" : 1727270804183,
+    "duration" : 361
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "4e764fd53222a563",
-  "name" : "Validates that the Books API response contains all expected books and does not have any duplicates.",
-  "time" : {
-    "start" : 1727221829618,
-    "stop" : 1727221830877,
-    "duration" : 1259
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "ea26bbef36e0cfc7",
-  "name" : "Validates that the authors API response code is 400 for an invalid ID and response details are as expected",
-  "time" : {
-    "start" : 1727221807772,
-    "stop" : 1727221808164,
-    "duration" : 392
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "687815445176179c",
-  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-  "time" : {
-    "start" : 1727221825716,
-    "stop" : 1727221826033,
-    "duration" : 317
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "cc5102c2f80e5a0e",
+  "uid" : "8eb86f972e23c73",
   "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
   "time" : {
-    "start" : 1727221832183,
-    "stop" : 1727221832507,
-    "duration" : 324
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "39e9c9d6d6b80f73",
-  "name" : "Validates that the authors API response code is 404 and response details are as expected",
-  "time" : {
-    "start" : 1727221808167,
-    "stop" : 1727221808508,
-    "duration" : 341
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "823648cfe003318f",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221838926,
-    "stop" : 1727221839262,
-    "duration" : 336
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "433ecba4bdc027ff",
-  "name" : "Validates that the authors API is persisting authors",
-  "time" : {
-    "start" : 1727221817999,
-    "stop" : 1727221819091,
-    "duration" : 1092
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "e7a0c28acc9be879",
-  "name" : "Validates that the update authors API is persisting authors",
-  "time" : {
-    "start" : 1727221826035,
-    "stop" : 1727221827121,
-    "duration" : 1086
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "699d79297e4902d",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221841905,
-    "stop" : 1727221842259,
-    "duration" : 354
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "e395c2925338b03c",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221811280,
-    "stop" : 1727221811613,
+    "start" : 1727270812603,
+    "stop" : 1727270812936,
     "duration" : 333
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "24e0b94fd997d67b",
-  "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
-  "time" : {
-    "start" : 1727221845628,
-    "stop" : 1727221845941,
-    "duration" : 313
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a563ba3c31b6d1d4",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221809389,
-    "stop" : 1727221809831,
-    "duration" : 442
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "71918c4770e226ff",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221823012,
-    "stop" : 1727221823331,
-    "duration" : 319
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e00d52e1ad996079",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221810941,
-    "stop" : 1727221811277,
-    "duration" : 336
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ed3056ce5cb73908",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221811945,
-    "stop" : 1727221812292,
-    "duration" : 347
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "14b32d1e2db0c1c2",
-  "name" : "Validates that the Books API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221843866,
-    "stop" : 1727221844218,
-    "duration" : 352
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f7b60a15ca2b6d07",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221822326,
-    "stop" : 1727221822680,
-    "duration" : 354
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "da5d3d9c93a80b54",
-  "name" : "Validates that the books API response code is 404 and response details are as expected",
-  "time" : {
-    "start" : 1727221831745,
-    "stop" : 1727221832181,
-    "duration" : 436
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "dda958ad6e83b576",
+  "uid" : "e3508b7508f4b60a",
   "name" : "Updates Book and validates the response and status code.",
   "time" : {
-    "start" : 1727221840550,
-    "stop" : 1727221840925,
-    "duration" : 375
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "484924a59be6c45a",
-  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-  "time" : {
-    "start" : 1727221809032,
-    "stop" : 1727221809380,
-    "duration" : 348
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b84d6e7b4bc12cae",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221809833,
-    "stop" : 1727221810166,
-    "duration" : 333
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4db3396cb3a84a9f",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221810168,
-    "stop" : 1727221810511,
-    "duration" : 343
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "42a28d8b39ffd180",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221810513,
-    "stop" : 1727221810938,
-    "duration" : 425
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6ad3aa2d53311115",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221842578,
-    "stop" : 1727221842905,
-    "duration" : 327
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e03dfe5094165e1d",
-  "name" : "Updates author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221822003,
-    "stop" : 1727221822324,
-    "duration" : 321
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "3d0520f8daac33fd",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221843555,
-    "stop" : 1727221843865,
-    "duration" : 310
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bda235694b05628c",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221817013,
-    "stop" : 1727221817333,
-    "duration" : 320
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "f131c6af98f904f3",
-  "name" : "Validates that the authors API response is handling non existing ID values",
-  "time" : {
-    "start" : 1727221828513,
-    "stop" : 1727221829258,
-    "duration" : 745
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "697b365cb24efdf3",
-  "name" : "Creates a new Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221833862,
-    "stop" : 1727221834181,
-    "duration" : 319
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fb5b2ce72f4737f1",
-  "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
-  "time" : {
-    "start" : 1727221851210,
-    "stop" : 1727221851545,
-    "duration" : 335
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "e666fbdf82b4f585",
-  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-  "time" : {
-    "start" : 1727221829260,
-    "stop" : 1727221829573,
-    "duration" : 313
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "ca856ef9754f1b9",
-  "name" : "Validates that the update Books API is persisting Books",
-  "time" : {
-    "start" : 1727221845943,
-    "stop" : 1727221847784,
-    "duration" : 1841
-  },
-  "status" : "failed",
-  "severity" : "normal"
-}, {
-  "uid" : "69f742a55257cf9e",
-  "name" : "Creates a new author and validates the response and status code.",
-  "time" : {
-    "start" : 1727221817660,
-    "stop" : 1727221817985,
-    "duration" : 325
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4e96fa8633b366d2",
-  "name" : "Validates that the books API response code is 400 for an invalid ID and response details are as expected",
-  "time" : {
-    "start" : 1727221831424,
-    "stop" : 1727221831743,
-    "duration" : 319
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a7c565414870531",
-  "name" : "Validates that the delete Books API response code is 400 for an invalid ID and response details are as expected",
-  "time" : {
-    "start" : 1727221849586,
-    "stop" : 1727221849917,
-    "duration" : 331
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5532f4b96a44ecf8",
-  "name" : "Updates Book and validates the response and status code.",
-  "time" : {
-    "start" : 1727221839898,
-    "stop" : 1727221840214,
+    "start" : 1727270807462,
+    "stop" : 1727270807778,
     "duration" : 316
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c751c71168609c72",
-  "name" : "Creates a new author and validates the response and status code.",
+  "uid" : "c8ebb2bbf2eb6663",
+  "name" : "Validates that the books API response code is 400 for an invalid ID and response details are as expected",
   "time" : {
-    "start" : 1727221813644,
-    "stop" : 1727221813983,
-    "duration" : 339
+    "start" : 1727270798906,
+    "stop" : 1727270799219,
+    "duration" : 313
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "3d30abbe80f6cac9",
-  "name" : "Validates that the authors API response contains all expected author details.",
+  "uid" : "a9aa578dc44c8dcf",
+  "name" : "Updates author and validates the response and status code.",
   "time" : {
-    "start" : 1727221806315,
-    "stop" : 1727221807726,
-    "duration" : 1411
+    "start" : 1727270787037,
+    "stop" : 1727270787355,
+    "duration" : 318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "aea66b9e67b38065",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270782061,
+    "stop" : 1727270782379,
+    "duration" : 318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b4010546cc04030",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270800893,
+    "stop" : 1727270801210,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2ee8c2a77c12e8f7",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270781082,
+    "stop" : 1727270781407,
+    "duration" : 325
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "35ae3097b54d08a2",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270801213,
+    "stop" : 1727270801529,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5937e3ec9303a761",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270808762,
+    "stop" : 1727270809070,
+    "duration" : 308
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "b52768f6b65956e7",
+  "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
+  "time" : {
+    "start" : 1727270818212,
+    "stop" : 1727270818533,
+    "duration" : 321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4c3f2f7cb9acf612",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270809388,
+    "stop" : 1727270809705,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b349a7fa9ac15d0",
+  "name" : "Validates that the delete author API response deletes an author",
+  "time" : {
+    "start" : 1727270794633,
+    "stop" : 1727270795701,
+    "duration" : 1068
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "8f20b723845e2e91",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270802180,
+    "stop" : 1727270802530,
+    "duration" : 350
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "11e9202d77011188",
+  "name" : "Validates that the Books API response is handling non existing ID values",
+  "time" : {
+    "start" : 1727270816744,
+    "stop" : 1727270818210,
+    "duration" : 1466
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "ddeb2a9763afca42",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270780442,
+    "stop" : 1727270780761,
+    "duration" : 319
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "46fbdb92e698cc80",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270802852,
+    "stop" : 1727270803167,
+    "duration" : 315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9eeb829fd416eff8",
+  "name" : "Validates that the books API response code is 404 and response details are as expected",
+  "time" : {
+    "start" : 1727270799221,
+    "stop" : 1727270799602,
+    "duration" : 381
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dcc0b06cd9bebfc9",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270807149,
+    "stop" : 1727270807460,
+    "duration" : 311
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "18d9b565fa91fa2e",
+  "name" : "Validates that the authors API response is handling non existing ID values",
+  "time" : {
+    "start" : 1727270792188,
+    "stop" : 1727270792510,
+    "duration" : 322
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "541c9e18b56155b0",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270787679,
+    "stop" : 1727270787995,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ff41cf976e5678c",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270809073,
+    "stop" : 1727270809385,
+    "duration" : 312
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "a2a6d6b76649035d",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270778695,
+    "stop" : 1727270779031,
+    "duration" : 336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9b0e4fef8d0af966",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270806186,
+    "stop" : 1727270806512,
+    "duration" : 326
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "888f1cac53646f3",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270791223,
+    "stop" : 1727270791539,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6f8ca8f1e457ab14",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270789632,
+    "stop" : 1727270789952,
+    "duration" : 320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b15c07b4201f07e",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270784321,
+    "stop" : 1727270784659,
+    "duration" : 338
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "93b0c56cff64a80b",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270777248,
+    "stop" : 1727270777656,
+    "duration" : 408
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d9bdfc38dbba2d66",
+  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
+  "time" : {
+    "start" : 1727270793243,
+    "stop" : 1727270793560,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "bc7d5d7d129492dc",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270781409,
+    "stop" : 1727270781732,
+    "duration" : 323
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe7e4a857996d3de",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270779737,
+    "stop" : 1727270780082,
+    "duration" : 345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ad9801db0b65689e",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270810340,
+    "stop" : 1727270810658,
+    "duration" : 318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f0c6537bd7dcdd45",
+  "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
+  "time" : {
+    "start" : 1727270799604,
+    "stop" : 1727270799919,
+    "duration" : 315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4884be22076ae88e",
+  "name" : "Validates that the delete authors API response code is 400 for an invalid ID and response details are as expected",
+  "time" : {
+    "start" : 1727270795703,
+    "stop" : 1727270796033,
+    "duration" : 330
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7c8fa04a6059dd47",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270790903,
+    "stop" : 1727270791221,
+    "duration" : 318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3ac56acbaa126da",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270783335,
+    "stop" : 1727270783661,
+    "duration" : 326
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ede74de2a33d0096",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270789953,
+    "stop" : 1727270790274,
+    "duration" : 321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b9bcdb8c7587ab23",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270782382,
+    "stop" : 1727270782699,
+    "duration" : 317
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b407558325f200da",
+  "name" : "Validates that the Books API response is handling non existing ID values",
+  "time" : {
+    "start" : 1727270811290,
+    "stop" : 1727270812602,
+    "duration" : 1312
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "d7625ec6c4ee97ad",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270809707,
+    "stop" : 1727270810022,
+    "duration" : 315
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f88218819dc70ee6",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270777659,
+    "stop" : 1727270778003,
+    "duration" : 344
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "197f6e5fb2878b8b",
+  "name" : "Validates that the Books API response is handling non existing ID values",
+  "time" : {
+    "start" : 1727270810978,
+    "stop" : 1727270811288,
+    "duration" : 310
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c094ae8d212ff11b",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270784661,
+    "stop" : 1727270784983,
+    "duration" : 322
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "976b2de74b8e921f",
+  "name" : "Validates that the update Books API is persisting Books",
+  "time" : {
+    "start" : 1727270812938,
+    "stop" : 1727270814621,
+    "duration" : 1683
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e74bc315394cab5",
+  "name" : "Validates that the authors API response code is 404 and response details are as expected",
+  "time" : {
+    "start" : 1727270776060,
+    "stop" : 1727270776407,
+    "duration" : 347
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1635837dcf503875",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270788962,
+    "stop" : 1727270789314,
+    "duration" : 352
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e66ea32fd97bff1a",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270779387,
+    "stop" : 1727270779734,
+    "duration" : 347
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f64bf369bfb08c75",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270789317,
+    "stop" : 1727270789629,
+    "duration" : 312
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b7cfa43efa848ea4",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270791868,
+    "stop" : 1727270792186,
+    "duration" : 318
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "79c20f10ca8e0c78",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270779034,
+    "stop" : 1727270779385,
+    "duration" : 351
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ea6709b0bf4e3e49",
+  "name" : "Validates that the authors API response code is 400 for an invalid ID and response details are as expected",
+  "time" : {
+    "start" : 1727270775678,
+    "stop" : 1727270776056,
+    "duration" : 378
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c7c8656d28b27a85",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270807780,
+    "stop" : 1727270808116,
+    "duration" : 336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fbdd0475e2f5234e",
+  "name" : "Creates a new Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270800574,
+    "stop" : 1727270800890,
+    "duration" : 316
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f9a17cf8807af2fb",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270782701,
+    "stop" : 1727270783015,
+    "duration" : 314
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a491dda025f61a87",
+  "name" : "Validates that the Books API response contains all expected books and does not have any duplicates.",
+  "time" : {
+    "start" : 1727270797171,
+    "stop" : 1727270798341,
+    "duration" : 1170
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a766581a666043c",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270783017,
+    "stop" : 1727270783333,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7e8d672edefe43c5",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270781734,
+    "stop" : 1727270782059,
+    "duration" : 325
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2b47a652ba99db65",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270780764,
+    "stop" : 1727270781080,
+    "duration" : 316
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6854fcbb68ee9bb4",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270790276,
+    "stop" : 1727270790586,
+    "duration" : 310
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3237a13ca8255435",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270790588,
+    "stop" : 1727270790901,
+    "duration" : 313
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6c0654c0e00328f",
+  "name" : "Validates that the delete Books API response code is 400 for an invalid ID and response details are as expected",
+  "time" : {
+    "start" : 1727270816405,
+    "stop" : 1727270816742,
+    "duration" : 337
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3c3f171f05f149af",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270783987,
+    "stop" : 1727270784319,
+    "duration" : 332
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d431a5ea12b23e1e",
+  "name" : "Validates that the Books API is persisting Books",
+  "time" : {
+    "start" : 1727270804501,
+    "stop" : 1727270806180,
+    "duration" : 1679
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "f29f56ef66399c91",
+  "name" : "Updates Book and validates the response and status code.",
+  "time" : {
+    "start" : 1727270808439,
+    "stop" : 1727270808760,
+    "duration" : 321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e8c3fc4e8ddd5545",
+  "name" : "Validates that the books API response contains all expected book details.",
+  "time" : {
+    "start" : 1727270798437,
+    "stop" : 1727270798903,
+    "duration" : 466
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "60c23782593eb5a7",
+  "name" : "Updates author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270787997,
+    "stop" : 1727270788318,
+    "duration" : 321
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c79796353fd4bf99",
+  "name" : "Creates a new author and validates the response and status code.",
+  "time" : {
+    "start" : 1727270778357,
+    "stop" : 1727270778693,
+    "duration" : 336
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a3a7dc5e7428bdfc",
+  "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
+  "time" : {
+    "start" : 1727270776902,
+    "stop" : 1727270777236,
+    "duration" : 334
   },
   "status" : "passed",
   "severity" : "normal"
