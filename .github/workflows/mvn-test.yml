@@ -45,33 +45,15 @@ jobs:
           path: target/site/allure-maven-plugin
 
       - name: Deploy Allure Report to GitHub Pages with History
-        if: success()
+        if: always()
         run: |
-          git config --global user.email "aleksandar.stojanovic@qakursevionline.com"
-          git config --global user.name "Aleksandar Stojanovic"
-          
-          # Clone gh-pages branch
-          git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
-          
-          # Copy the existing history directory if it exists
-          mkdir -p allure-history
-          if [ -d "gh-pages/history" ]; then
-            cp -r gh-pages/history allure-history/
-          fi
-
-          # Clean the old report files
-          rm -rf gh-pages/*
-
-          # Copy new report to gh-pages
-          cp -r target/site/allure-maven-plugin/* gh-pages/
-
-          # Reintegrate the history back into the new report
-          if [ -d "allure-history" ]; then
-            cp -r allure-history/* gh-pages/history/
-          fi
-
-          # Push the updated report to gh-pages
-          cd gh-pages
-          git add .
-          git commit -m "Update Allure Report with History"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
+            git config --global user.email "aleksandar.stojanovic@qakursevionline.com"
+            git config --global user.name "Aleksandar Stojanovic"
+            
+            git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+            cp -r target/site/allure-maven-plugin/* gh-pages/
+            
+            cd gh-pages
+            git add .
+            git commit -m "Update Allure Report with History on $(date)"
+            git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages"
