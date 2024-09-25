@@ -15,10 +15,10 @@
     "uid" : "9f4af0a3e12b96e25f05325e13010935",
     "name" : "Authors Management",
     "statistic" : {
-      "failed" : 4,
+      "failed" : 3,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
       "total" : 5
     }
