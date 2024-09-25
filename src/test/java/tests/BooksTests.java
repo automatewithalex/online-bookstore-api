@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import models.requests.books.BookRequest;
 import models.responses.books.GetBooksResponse;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import tests.base.BaseTest;
 
 import java.io.IOException;
@@ -16,106 +16,143 @@ import java.util.List;
 import static utils.common.CommonUtils.*;
 import static utils.common.JsonUtils.*;
 import static utils.assertions.AssertionsUtils.*;
-import static utils.assertions.BookAssertionUtils.assertBookCreated;
-import static utils.assertions.BookAssertionUtils.assertBookErrors;
+import static utils.assertions.BookAssertionUtils.*;
+import static utils.common.LogUtils.*;
 
 public class BooksTests extends BaseTest {
+
+    List<GetBooksResponse> expectedBooks;
+
+    @BeforeClass
+    @Parameters({"apiVersion", "env"})
+    public void setupBooksTestConfig(String apiVersion, String env) throws IOException {
+        logInfo(logger, "Initializing Books test setup");
+        expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
+        logInfo(logger, "Books test setup completed");
+    }
 
     @Epic("Books Management")
     @Feature("Get Books")
     @Story("US-006")
     @Issue("DE-006")
-    @Test(testName = "GET All Books", description = "Validates that the Books API response contains all expected books and does not have any duplicates.", priority = 0)
+    @Test(testName = "GET All Books", description = "Validates that the Books API response contains all expected books and does not have any duplicates.")
     public void testBooksApiGetAll() throws IOException {
-        Response response = RestAssured.given()
-                .get(booksEndpoint);
+        logTestStart(logger, "GET All Books");
+
+        Response response = RestAssured.given().get(booksEndpoint);
+
+        logResponseInfo(logger, "GET /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(response.body().asString()));
+
+        assertStatusCode(response, 200, logger);
+        assertResponseTime(response, maxResponseTime, logger);
 
         List<GetBooksResponse> responseBooks = parseJsonResponseList(response, GetBooksResponse.class);
-        List<GetBooksResponse> expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
         List<GetBooksResponse> missingBooks = findMissingObjects(expectedBooks, responseBooks);
+        assertMissingItems(responseBooks, expectedBooks, missingBooks, printPrettyJson(response.body().asString()), logger);
+
         List<GetBooksResponse> duplicateBooks = findDuplicateObjects(responseBooks);
+        assertNoDuplicateItems(duplicateBooks, printPrettyJson(response.body().asString()), logger);
 
-        assertStatusCode(response, 200);
-        assertResponseTime(response, maxResponseTime);
-
-        assertMissingItems(responseBooks, expectedBooks, missingBooks, printPrettyJson(response.body().asString()));
-        assertNoDuplicateItems(duplicateBooks, printPrettyJson(response.body().asString()));
+        logTestEnd(logger, "GET All Books");
     }
 
     @Epic("Books Management")
     @Feature("Get Book")
     @Story("US-007")
     @Issue("DE-007")
-    @Test(testName = "GET Book by existing ID", description = "Validates that the books API response contains all expected book details.", priority = 0)
+    @Test(testName = "GET Book by existing ID", description = "Validates that the books API response contains all expected book details.")
     public void testBooksApiGetByID() throws IOException {
-        List<GetBooksResponse> expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
+        logTestStart(logger, "GET Book by existing ID");
 
-        Response response = RestAssured.given()
-                .get(booksEndpoint + "/" + expectedBooks.getFirst().getId());
+        String path = booksEndpoint + "/" + expectedBooks.getFirst().getId();
+        Response response = RestAssured.given().get(path);
+
+        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+
+        assertStatusCode(response, 200, logger);
+        assertResponseTime(response, maxResponseTime, logger);
 
         GetBooksResponse responseBook = parseJsonResponseObject(response, GetBooksResponse.class);
+        assertItemMatches(expectedBooks.getFirst(), responseBook, logger);
 
-        assertStatusCode(response, 200);
-        assertResponseTime(response, maxResponseTime);
-
-        assertItemMatches(expectedBooks.getFirst(), responseBook);
+        logTestEnd(logger, "GET Book by existing ID");
     }
 
     @Epic("Books Management")
     @Feature("Get Book")
     @Story("US-007")
-    @Test(testName = "GET Book with non-existing ID", description = "Validates that the books API response code is 404 and response details are as expected", priority = 0)
+    @Test(testName = "GET Book with non-existing ID", description = "Validates that the books API response code is 404 and response details are as expected")
     public void testBooksApiGetByNonExistentID() throws JsonProcessingException {
-        Response response = RestAssured.given()
-                .get(booksEndpoint + "/0000");
+        logTestStart(logger, "GET Book with non-existing ID");
 
-        assertStatusCode(response, 404);
-        assertResponseTime(response, maxResponseTime);
+        String path = booksEndpoint + "/0000";
+        Response response = RestAssured.given().get(path);
 
-        assertBadRequest(response, "Not Found", 404);
+        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
+
+        assertStatusCode(response, 404, logger);
+        assertResponseTime(response, maxResponseTime, logger);
+        assertBadRequest(response, "Not Found", 404, logger);
+
+        logTestEnd(logger, "GET Book with non-existing ID");
     }
 
     @Epic("Books Management")
     @Feature("Get Book")
     @Story("US-007")
-    @Test(testName = "GET Book with invalid ID", description = "Validates that the books API response code is 400 for an invalid ID and response details are as expected", priority = 0)
+    @Test(testName = "GET Book with invalid ID", description = "Validates that the books API response code is 400 for an invalid ID and response details are as expected")
     public void testBooksApiGetByInvalidID() throws JsonProcessingException {
+        logTestStart(logger, "GET Book with invalid ID");
+
         String invalidID = "invalidID";
+        String path = booksEndpoint + "/" + invalidID;
+        Response response = RestAssured.given().get(path);
 
-        Response response = RestAssured.given()
-                .get(booksEndpoint + "/" + invalidID);
+        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
-
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + invalidID + "' is not valid."
+                "The value '" + invalidID + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "GET Book with invalid ID");
     }
 
     @Epic("Books Management")
     @Feature("Get Book")
     @Story("US-007")
-    @Test(testName = "GET Book with SQL Injection in ID", description = "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.", priority = 0)
+    @Test(testName = "GET Book with SQL Injection in ID", description = "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.")
     public void testBooksApiSqlInjectionInId() throws JsonProcessingException {
+        logTestStart(logger, "GET Book with SQL Injection in ID");
+
         String sqlInjectionId = "' OR 1=1; --";
+        String path = booksEndpoint + "/" + sqlInjectionId;
+        Response response = RestAssured.given().get(path);
 
-        Response response = RestAssured.given()
-                .get(booksEndpoint + "/" + sqlInjectionId);
+        logResponseInfo(logger, "GET /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "GET /" + path, printPrettyJson(response.body().asString()));
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
-
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(
                 response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + sqlInjectionId + "' is not valid."
+                "The value '" + sqlInjectionId + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "GET Book with SQL Injection in ID");
     }
 
     @Epic("Books Management")
@@ -131,6 +168,8 @@ public class BooksTests extends BaseTest {
     })
     @Test(dataProvider = "createBookDataProvider", dataProviderClass = DataProviders.class, description = "Creates a new Book and validates the response and status code.", testName = "POST", priority = 1)
     public void testCreateNewBook(String testName, int expectedStatusCode, Long id, String title, String description, int pageCount, String excerpt, String publishDate) throws JsonProcessingException {
+        logTestStart(logger, "POST " + testName);
+
         BookRequest newBook = new BookRequest(id, title, description, pageCount, excerpt, publishDate);
 
         Response response = RestAssured.given()
@@ -138,16 +177,21 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .post(booksEndpoint);
 
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "POST /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST /" + booksEndpoint, printPrettyJson(response.body().asString()));
+
+        assertResponseTime(response, maxResponseTime, logger);
 
         if (expectedStatusCode == 200) {
-            assertStatusCode(response, 200);
-            assertBookCreated(response, newBook);
+            assertStatusCode(response, 200, logger);
+            assertBookCreated(response, newBook, logger);
         } else if (expectedStatusCode == 400) {
-            assertStatusCode(response, 400);
-            assertBadRequest(response, "One or more validation errors occurred.", 400);
-            assertBookErrors(response, id, title, pageCount);
+            assertStatusCode(response, 400, logger);
+            assertBadRequest(response, "One or more validation errors occurred.", 400, logger);
+            assertBookErrors(response, id, title, pageCount, logger);
         }
+
+        logTestEnd(logger, "POST " + testName);
     }
 
     @Epic("Books Management")
@@ -155,23 +199,26 @@ public class BooksTests extends BaseTest {
     @Story("US-008")
     @Test(testName = "POST Create Book with valid data persistence check", description = "Validates that the Books API is persisting Books", priority = 1)
     public void testCreateNewBookPersistenceCheck() throws IOException {
-        Response responseAllBooks = RestAssured.given()
-                .get(booksEndpoint);
+        logTestStart(logger, "POST Create Book with valid data persistence check");
 
-        assertStatusCode(responseAllBooks, 200);
-        assertResponseTime(responseAllBooks, maxResponseTime);
+        Response responseAllBooks = RestAssured.given().get(booksEndpoint);
+
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseAllBooks, 200, logger);
+        assertResponseTime(responseAllBooks, maxResponseTime, logger);
 
         List<GetBooksResponse> getResponseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
-        List<GetBooksResponse> getExpectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
         long newBookId = getResponseBooks.getLast().getId() + 1;
 
         BookRequest newBook = new BookRequest(
                 newBookId,
-                getExpectedBooks.getFirst().getTitle(),
-                getExpectedBooks.getFirst().getDescription(),
-                getExpectedBooks.getFirst().getPageCount(),
-                getExpectedBooks.getFirst().getExcerpt(),
-                getExpectedBooks.getFirst().getPublishDate()
+                expectedBooks.getFirst().getTitle(),
+                expectedBooks.getFirst().getDescription(),
+                expectedBooks.getFirst().getPageCount(),
+                expectedBooks.getFirst().getExcerpt(),
+                expectedBooks.getFirst().getPublishDate()
         );
 
         Response response = RestAssured.given()
@@ -179,20 +226,26 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .post(booksEndpoint);
 
-        assertStatusCode(response, 200);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "POST /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "POST /" + booksEndpoint, printPrettyJson(response.body().asString()));
 
-        assertBookCreated(response, newBook);
+        assertStatusCode(response, 200, logger);
+        assertResponseTime(response, maxResponseTime, logger);
+        assertBookCreated(response, newBook, logger);
 
-        Response responseBook = RestAssured.given()
-                .get(booksEndpoint + "/" + newBookId);
+        String path = booksEndpoint + "/" + newBookId;
+        Response responseBook = RestAssured.given().get(path);
 
-        assertStatusCode(responseBook, 200);
-        assertResponseTime(responseBook, maxResponseTime);
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseBook, 200, logger);
+        assertResponseTime(responseBook, maxResponseTime, logger);
 
         GetBooksResponse getResponseBooksLatest = parseJsonResponseObject(responseBook, GetBooksResponse.class);
+        assertItemMatches(newBook, getResponseBooksLatest, logger);
 
-        assertItemMatches(newBook, getResponseBooksLatest);
+        logTestEnd(logger, "POST Create Book with valid data persistence check");
     }
 
     @Epic("Books Management")
@@ -205,23 +258,31 @@ public class BooksTests extends BaseTest {
     })
     @Test(dataProvider = "updateBookDataProvider", dataProviderClass = DataProviders.class, description = "Updates Book and validates the response and status code.", testName = "PUT", priority = 2)
     public void testUpdateBook(String testName, int expectedStatusCode, Long id, String title, String description, int pageCount, String excerpt, String publishDate) throws JsonProcessingException {
+        logTestStart(logger, "PUT " + testName);
+
         BookRequest BookRequest = new BookRequest(id, title, description, pageCount, excerpt, publishDate);
 
+        String path = booksEndpoint + "/" + id;
         Response response = RestAssured.given()
                 .contentType("application/json")
                 .body(BookRequest)
-                .put(booksEndpoint + "/" + id);
+                .put(path);
 
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
 
         if (expectedStatusCode == 200) {
-            assertStatusCode(response, 200);
-            assertBookCreated(response, BookRequest);
+            assertStatusCode(response, 200, logger);
+            assertBookCreated(response, BookRequest, logger);
         } else if (expectedStatusCode == 400) {
-            assertStatusCode(response, 400);
-            assertBadRequest(response, "One or more validation errors occurred.", 400);
-            assertBookErrors(response, id, title, pageCount);
+            assertStatusCode(response, 400, logger);
+            assertBadRequest(response, "One or more validation errors occurred.", 400, logger);
+            assertBookErrors(response, id, title, pageCount, logger);
         }
+
+        assertResponseTime(response, maxResponseTime, logger);
+
+        logTestEnd(logger, "PUT " + testName);
     }
 
     @Epic("Books Management")
@@ -230,7 +291,7 @@ public class BooksTests extends BaseTest {
     @Issue("DE-017")
     @Test(testName = "PUT Books with non existing ID", description = "Validates that the Books API response is handling non existing ID values", priority = 2)
     public void testUpdateBookWithNonExistingID() throws IOException {
-        List<GetBooksResponse> expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
+        logTestStart(logger, "PUT Books with non existing ID");
 
         BookRequest newBook = new BookRequest(
                 expectedBooks.getFirst().getId(),
@@ -249,10 +310,14 @@ public class BooksTests extends BaseTest {
                 .body(newBook)
                 .put(booksEndpoint + "/" + (responseBooks.getLast().getId() + 1));
 
-        assertStatusCode(response, 404);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
 
-        assertBadRequest(response, "Not Found", 404);
+        assertStatusCode(response, 404, logger);
+        assertResponseTime(response, maxResponseTime, logger);
+        assertBadRequest(response, "Not Found", 404, logger);
+
+        logTestEnd(logger, "PUT Books with non existing ID");
     }
 
     @Epic("Books Management")
@@ -260,8 +325,7 @@ public class BooksTests extends BaseTest {
     @Story("US-009")
     @Test(testName = "PUT Books with invalid ID", description = "Validates that the Books API response is handling non existing ID values", priority = 2)
     public void testUpdateBookWithInvalidID() throws IOException {
-        String invalidID = "invalidID";
-        List<GetBooksResponse> expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
+        logTestStart(logger, "PUT Books with invalid ID");
 
         BookRequest newBook = new BookRequest(
                 expectedBooks.getFirst().getId(),
@@ -272,21 +336,28 @@ public class BooksTests extends BaseTest {
                 expectedBooks.getFirst().getPublishDate()
         );
 
+        String invalidID = "invalidID";
+        String path = booksEndpoint + "/" + invalidID;
         Response response = RestAssured.given()
                 .contentType("application/json")
                 .body(newBook)
-                .put(booksEndpoint + "/" + invalidID);
+                .put(path);
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
 
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(
                 response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + invalidID + "' is not valid."
+                "The value '" + invalidID + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "PUT Books with invalid ID");
     }
 
     @Epic("Books Management")
@@ -294,8 +365,7 @@ public class BooksTests extends BaseTest {
     @Story("US-009")
     @Test(testName = "PUT Books with SQL Injection in ID", description = "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.", priority = 2)
     public void testUpdateBooksApiSqlInjectionInId() throws IOException {
-        String sqlInjectionId = "' OR 1=1; --";
-        List<GetBooksResponse> expectedBooks = loadDataFromJsonFile(env, "books/books", GetBooksResponse.class);
+        logTestStart(logger, "PUT Books with SQL Injection in ID");
 
         BookRequest newBook = new BookRequest(
                 expectedBooks.getFirst().getId(),
@@ -306,21 +376,28 @@ public class BooksTests extends BaseTest {
                 expectedBooks.getFirst().getPublishDate()
         );
 
+        String sqlInjectionId = "' OR 1=1; --";
+        String path = booksEndpoint + "/" + sqlInjectionId;
         Response response = RestAssured.given()
                 .contentType("application/json")
                 .body(newBook)
-                .put(booksEndpoint + "/" + sqlInjectionId);
+                .put(path);
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "PUT /" + booksEndpoint, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT /" + booksEndpoint, printPrettyJson(response.body().asString()));
 
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(
                 response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + sqlInjectionId + "' is not valid."
+                "The value '" + sqlInjectionId + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "PUT Books with SQL Injection in ID");
     }
 
     @Epic("Books Management")
@@ -329,10 +406,15 @@ public class BooksTests extends BaseTest {
     @Issue("DE-018")
     @Test(testName = "PUT update Book with valid data persistence check", description = "Validates that the update Books API is persisting Books", priority = 2)
     public void testUpdateNewBookPersistenceCheck() throws IOException {
+        logTestStart(logger, "PUT update Book with valid data persistence check");
+
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        assertStatusCode(responseAllBooks, 200);
-        assertResponseTime(responseAllBooks, maxResponseTime);
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseAllBooks, 200, logger);
+        assertResponseTime(responseAllBooks, maxResponseTime, logger);
 
         List<GetBooksResponse> getResponseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
         long existingBookID = getResponseBooks.getFirst().getId();
@@ -346,25 +428,31 @@ public class BooksTests extends BaseTest {
                 getResponseBooks.getFirst().getPublishDate()
         );
 
+        String path = booksEndpoint + "/" + existingBookID;
         Response response = RestAssured.given()
                 .contentType("application/json")
                 .body(updatedBook)
-                .put(booksEndpoint + "/" + existingBookID);
+                .put(path);
 
-        assertStatusCode(response, 200);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "PUT /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "PUT /" + path, printPrettyJson(response.body().asString()));
 
-        assertBookCreated(response, updatedBook);
+        assertStatusCode(response, 200, logger);
+        assertResponseTime(response, maxResponseTime, logger);
+        assertBookCreated(response, updatedBook, logger);
 
-        Response responseBook = RestAssured.given()
-                .get(booksEndpoint + "/" + existingBookID);
+        Response responseBook = RestAssured.given().get(path);
 
-        assertStatusCode(responseBook, 200);
-        assertResponseTime(responseBook, maxResponseTime);
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseBook, 200, logger);
+        assertResponseTime(responseBook, maxResponseTime, logger);
 
         GetBooksResponse getResponseBook = parseJsonResponseObject(responseBook, GetBooksResponse.class);
+        assertItemMatches(updatedBook, getResponseBook, logger);
 
-        assertItemMatches(updatedBook, getResponseBook);
+        logTestEnd(logger, "PUT update Book with valid data persistence check");
     }
 
     @Epic("Books Management")
@@ -373,25 +461,37 @@ public class BooksTests extends BaseTest {
     @Issue("DE-019")
     @Test(testName = "DELETE Book by ID deletion check", description = "Validates that the delete Book API response deletes an Book", priority = 3)
     public void testDeleteBookByID() throws IOException {
+        logTestStart(logger, "DELETE Book by ID deletion check");
+
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
 
-        assertStatusCode(responseAllBooks, 200);
-        assertResponseTime(responseAllBooks, maxResponseTime);
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseAllBooks, 200, logger);
+        assertResponseTime(responseAllBooks, maxResponseTime, logger);
 
         List<GetBooksResponse> getResponseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
         long existingBookID = getResponseBooks.getFirst().getId();
 
-        Response response = RestAssured.given()
-                .delete(booksEndpoint + "/" + existingBookID);
+        String path = booksEndpoint + "/" + existingBookID;
+        Response response = RestAssured.given().delete(path);
 
-        assertStatusCode(response, 200);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "DELETE /" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(responseAllBooks.body().asString()));
 
-        Response responseBook = RestAssured.given()
-                .get(booksEndpoint + "/" + existingBookID);
+        assertStatusCode(response, 200, logger);
+        assertResponseTime(response, maxResponseTime, logger);
 
-        assertStatusCode(responseBook, 404);
-        assertResponseTime(responseBook, maxResponseTime);
+        Response responseBook = RestAssured.given().get(path);
+
+        logResponseInfo(logger, "GET /" + path, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + path, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseBook, 404, logger);
+        assertResponseTime(responseBook, maxResponseTime, logger);
+
+        logTestStart(logger, "DELETE Book by ID deletion check");
     }
 
     @Epic("Books Management")
@@ -400,21 +500,27 @@ public class BooksTests extends BaseTest {
     @Issue("DE-020")
     @Test(testName = "DELETE Book by invalid ID", description = "Validates that the delete Books API response code is 400 for an invalid ID and response details are as expected", priority = 3)
     public void testDeleteBookWithInvalidID() throws IOException {
+        logTestStart(logger, "DELETE Book by ID deletion check");
+
         String invalidID = "invalidID";
+        String path = booksEndpoint + "/" + invalidID;
+        Response response = RestAssured.given().delete(path);
 
-        Response response = RestAssured.given()
-                .delete(booksEndpoint + "/" + invalidID);
+        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
-
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(
                 response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + invalidID + "' is not valid."
+                "The value '" + invalidID + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "DELETE Book by ID deletion check");
     }
 
     @Epic("Books Management")
@@ -422,17 +528,30 @@ public class BooksTests extends BaseTest {
     @Story("US-010")
     @Test(testName = "DELETE Book with non-existing ID", description = "Validates that the Books API response is handling non existing ID values", priority = 3)
     public void testDeleteBookWithNonExistingID() throws IOException {
+        logTestStart(logger, "DELETE Book by ID deletion check");
+
         Response responseAllBooks = RestAssured.given().get(booksEndpoint);
+
+        logResponseInfo(logger, "GET /" + booksEndpoint, responseAllBooks.getStatusCode(), responseAllBooks.getTime());
+        logResponseDebug(logger, "GET /" + booksEndpoint, printPrettyJson(responseAllBooks.body().asString()));
+
+        assertStatusCode(responseAllBooks, 200, logger);
+        assertResponseTime(responseAllBooks, maxResponseTime, logger);
+
         List<GetBooksResponse> responseBooks = parseJsonResponseList(responseAllBooks, GetBooksResponse.class);
         long nonExistentID = responseBooks.getLast().getId() + 1;
 
-        Response response = RestAssured.given()
-                .delete(booksEndpoint + "/" + nonExistentID);
+        String path = booksEndpoint + "/" + nonExistentID;
+        Response response = RestAssured.given().delete(path);
 
-        assertStatusCode(response, 404);
-        assertResponseTime(response, maxResponseTime);
+        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
 
-        assertBadRequest(response, "Not Found", 404);
+        assertStatusCode(response, 404, logger);
+        assertResponseTime(response, maxResponseTime, logger);
+        assertBadRequest(response, "Not Found", 404, logger);
+
+        logTestEnd(logger, "DELETE Book by ID deletion check");
     }
 
     @Epic("Books Management")
@@ -440,21 +559,27 @@ public class BooksTests extends BaseTest {
     @Story("US-010")
     @Test(testName = "DELETE Book with SQL Injection in ID", description = "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.", priority = 3)
     public void testDeleteBooksApiSqlInjectionInId() throws IOException {
+        logTestStart(logger, "DELETE Book by ID deletion check");
+
         String sqlInjectionId = "' OR 1=1; --";
+        String path = booksEndpoint + "/" + sqlInjectionId;
+        Response response = RestAssured.given().delete(path);
 
-        Response response = RestAssured.given()
-                .delete(booksEndpoint + "/" + sqlInjectionId);
+        logResponseInfo(logger, "DELETE /" + path, response.getStatusCode(), response.getTime());
+        logResponseDebug(logger, "DELETE /" + path, printPrettyJson(response.body().asString()));
 
-        assertStatusCode(response, 400);
-        assertResponseTime(response, maxResponseTime);
-
+        assertStatusCode(response, 400, logger);
+        assertResponseTime(response, maxResponseTime, logger);
         assertBadRequestWithErrors(
                 response,
                 "One or more validation errors occurred.",
                 400,
                 "id",
-                "The value '" + sqlInjectionId + "' is not valid."
+                "The value '" + sqlInjectionId + "' is not valid.",
+                logger
         );
+
+        logTestEnd(logger, "DELETE Book by ID deletion check");
     }
 
 }

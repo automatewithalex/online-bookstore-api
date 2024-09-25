@@ -8,6 +8,8 @@ import org.testng.annotations.Parameters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static utils.common.LogUtils.*;
+
 /**
  * The base class for API tests. This class is responsible for setting up the test environment
  * and loading configuration properties before the tests are run. It provides common setup
@@ -32,22 +34,23 @@ public class BaseTest {
     @BeforeClass
     @Parameters({"apiVersion", "env"})
     public void setupConfig(String apiVersion, String env) {
-        logger.info("Initializing setup for API version: {} and environment: {}", apiVersion, env);
+        logInfo(logger, "Initializing setup");
+        logTestParams(logger, env, apiVersion);
         setEnv(env);
         setVersion(apiVersion);
-        loadConfigForEnvironment(env);
+        loadConfig();
         configureRestAssured();
         setupEndpoints();
         setMaxResponseTime();
+        logInfo(logger, "Setup completed");
     }
 
     /**
      * Loads configuration for the given environment.
      * This method fetches and loads the necessary properties for the provided environment.
      *
-     * @param env the environment for which the configuration is being loaded.
      */
-    private void loadConfigForEnvironment(String env) {
+    private void loadConfig() {
         ConfigManager.loadApiProperties();
         ConfigManager.loadPathProperties();
     }
@@ -88,6 +91,7 @@ public class BaseTest {
      */
     private void configureRestAssured() {
         RestAssured.baseURI = ConfigManager.getBaseUrl(ConfigManager.getEnv());
+        logger.debug("API Base URL: {}", RestAssured.baseURI);
     }
 
     /**
@@ -97,9 +101,10 @@ public class BaseTest {
      */
     @AfterClass
     public void tearDown() {
-        logger.info("Test execution completed. Cleaning up...");
+        logInfo(logger, "Initializing tear down");
         // Clean up after all tests (optional)
         // For example, closing database connections or resetting configurations
+        logInfo(logger, "Tear down completed");
     }
 
 }
