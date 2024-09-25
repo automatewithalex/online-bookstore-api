@@ -23,7 +23,7 @@ public class LogUtils {
      * @param time   the name of the test.
      */
     public static void logResponseInfo(Logger logger, String endpoint, int status, long time) {
-        logger.info("Endpoint: {}\n Status code: {}\n Response time: {}", endpoint, status, time);
+        logger.info("Endpoint: {} Status code: {} Response time: {}", endpoint, status, time);
     }
 
     /**
@@ -44,7 +44,7 @@ public class LogUtils {
      * @param testName   the name of the test.
      */
     public static void logTestStart(Logger logger, String testName) {
-        logger.info("Starting Test: {}", testName);
+        logger.info("\n ### Starting Test: {}", testName);
     }
 
     /**
@@ -64,7 +64,7 @@ public class LogUtils {
      * @param testName the name of the test.
      */
     public static void logTestEnd(Logger logger, String testName) {
-        logger.info("Test Completed: {}", testName);
+        logger.info("\n ### Test Completed: {}", testName);
     }
 
 }
