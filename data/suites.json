@@ -9,194 +9,194 @@
         "name" : "tests.AuthorsTests",
         "children" : [ {
           "name" : "Validates that the authors API response contains all expected author details.",
-          "uid" : "af51d68285cd1881",
+          "uid" : "d99eee45bd1f1280",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273338723,
-            "stop" : 1727273340035,
-            "duration" : 1312
+            "start" : 1727273347625,
+            "stop" : 1727273348923,
+            "duration" : 1298
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the authors API response code is 400 for an invalid ID and response details are as expected",
-          "uid" : "d8240f91659b4c13",
+          "uid" : "9082ab674eb6a30a",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273340080,
-            "stop" : 1727273340438,
-            "duration" : 358
+            "start" : 1727273348968,
+            "stop" : 1727273349301,
+            "duration" : 333
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the authors API response code is 404 and response details are as expected",
-          "uid" : "6e96247b51008329",
+          "uid" : "529f734f01e75a42",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273340442,
-            "stop" : 1727273340793,
-            "duration" : 351
+            "start" : 1727273349305,
+            "stop" : 1727273349648,
+            "duration" : 343
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the authors API response contains all expected authors and does not have any duplicates.",
-          "uid" : "a0029b1a69dce5f2",
+          "uid" : "8c40378cb3bdd275",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273340797,
-            "stop" : 1727273341295,
-            "duration" : 498
+            "start" : 1727273349651,
+            "stop" : 1727273350119,
+            "duration" : 468
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-          "uid" : "e2d9a8915ee526a9",
+          "uid" : "3dfd033d5e482bab",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273341299,
-            "stop" : 1727273341666,
-            "duration" : 367
+            "start" : 1727273350124,
+            "stop" : 1727273350463,
+            "duration" : 339
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "10d196a18ec0bf57",
+          "uid" : "13530376ffcda9a1",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273341678,
-            "stop" : 1727273342091,
-            "duration" : 413
+            "start" : 1727273350474,
+            "stop" : 1727273350881,
+            "duration" : 407
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with valid data", "200", "0", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "78ea89ddd692de37",
+          "uid" : "23ba5e3ef2e16910",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273342093,
-            "stop" : 1727273342436,
-            "duration" : 343
+            "start" : 1727273350884,
+            "stop" : 1727273351204,
+            "duration" : 320
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with empty firstName", "200", "0", "1", "", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "3ede95e31bdbf7b3",
+          "uid" : "d13d1ff0597b9fc8",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273342438,
-            "stop" : 1727273342800,
-            "duration" : 362
+            "start" : 1727273351206,
+            "stop" : 1727273351534,
+            "duration" : 328
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with empty lastName", "200", "0", "1", "John", "", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "3cd3540ecc6510e0",
+          "uid" : "dbd248179d84f033",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273342802,
-            "stop" : 1727273343157,
-            "duration" : 355
+            "start" : 1727273351536,
+            "stop" : 1727273351926,
+            "duration" : 390
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with null id", "400", "null", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "24311c2f8ffa3c71",
+          "uid" : "3762b14d182e3963",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273343159,
-            "stop" : 1727273343488,
-            "duration" : 329
+            "start" : 1727273351929,
+            "stop" : 1727273352254,
+            "duration" : 325
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with null book id", "400", "1", "null", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "4a6340893b39f164",
+          "uid" : "cf128d74d8ce5258",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273343491,
-            "stop" : 1727273343845,
-            "duration" : 354
+            "start" : 1727273352257,
+            "stop" : 1727273352580,
+            "duration" : 323
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with null id and null book id", "400", "null", "null", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "96f7785c70fc0650",
+          "uid" : "378a6c2b27941b4",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273343847,
-            "stop" : 1727273344200,
-            "duration" : 353
+            "start" : 1727273352583,
+            "stop" : 1727273352904,
+            "duration" : 321
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with null firstName", "200", "0", "1", "null", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "a4bf142a0bacfb1f",
+          "uid" : "60e28075a4713971",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273344202,
-            "stop" : 1727273344533,
-            "duration" : 331
+            "start" : 1727273352906,
+            "stop" : 1727273353259,
+            "duration" : 353
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with null lastName", "200", "0", "1", "null", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "808a846b2ff91186",
+          "uid" : "b2df45142d500093",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273344536,
-            "stop" : 1727273344878,
-            "duration" : 342
+            "start" : 1727273353262,
+            "stop" : 1727273353581,
+            "duration" : 319
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with non utf-8 characters firstName", "200", "0", "1", "ΩπΩ", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "98fbae3fdb7c397",
+          "uid" : "174ac0ae6574ec86",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273344880,
-            "stop" : 1727273345204,
+            "start" : 1727273353583,
+            "stop" : 1727273353907,
             "duration" : 324
           },
           "flaky" : false,
@@ -204,142 +204,142 @@
           "parameters" : [ "v1", "Create a new Author with non utf-8 characters lastName", "200", "0", "1", "John", "ΩπΩ", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "bc13f6025318c037",
+          "uid" : "f269a4eb55dd7f3f",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273345206,
-            "stop" : 1727273345523,
-            "duration" : 317
+            "start" : 1727273353910,
+            "stop" : 1727273354249,
+            "duration" : 339
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with space in first name", "200", "0", "1", " John D ", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "823f933926f928c2",
+          "uid" : "2387010c32d963d1",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273345525,
-            "stop" : 1727273345881,
-            "duration" : 356
+            "start" : 1727273354251,
+            "stop" : 1727273354578,
+            "duration" : 327
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with space in last name", "200", "0", "1", "John", " Doe D ", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "64d4ae69f36c6fdd",
+          "uid" : "ac4a868102175284",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273345883,
-            "stop" : 1727273346205,
-            "duration" : 322
+            "start" : 1727273354580,
+            "stop" : 1727273354917,
+            "duration" : 337
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with special characters in first name", "200", "0", "1", "!#@{}[]", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "a6a413b495f5d7d9",
+          "uid" : "83e308680b419b14",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273346208,
-            "stop" : 1727273346525,
-            "duration" : 317
+            "start" : 1727273354919,
+            "stop" : 1727273355252,
+            "duration" : 333
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with special characters in last name", "200", "0", "1", "John", "!#@{}[]", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "10a1d1c7a528d447",
+          "uid" : "8f7c3dfbcc77fdf6",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273346528,
-            "stop" : 1727273346857,
-            "duration" : 329
+            "start" : 1727273355254,
+            "stop" : 1727273355578,
+            "duration" : 324
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with max id value", "200", "2147483647", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "fa6a083ae994e541",
+          "uid" : "e65a9769171e9c67",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273346860,
-            "stop" : 1727273347181,
-            "duration" : 321
+            "start" : 1727273355580,
+            "stop" : 1727273355908,
+            "duration" : 328
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with over the max id value", "400", "2147483648", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "a1563b9597e42baa",
+          "uid" : "1d41d17c51c995fd",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273347183,
-            "stop" : 1727273347509,
-            "duration" : 326
+            "start" : 1727273355910,
+            "stop" : 1727273356243,
+            "duration" : 333
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with negative id value", "200", "-1", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "4152164550cbf73a",
+          "uid" : "3fd95b6163354312",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273347511,
-            "stop" : 1727273347826,
-            "duration" : 315
+            "start" : 1727273356245,
+            "stop" : 1727273356568,
+            "duration" : 323
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with min id value", "200", "-2147483648", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "a1187c75da971143",
+          "uid" : "24d36c682ca31618",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273347828,
-            "stop" : 1727273348168,
-            "duration" : 340
+            "start" : 1727273356570,
+            "stop" : 1727273356899,
+            "duration" : 329
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with below min id value", "400", "-2147483649", "1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "ccb9f920cdb2f44e",
+          "uid" : "ac538892f8b5c8c9",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273348170,
-            "stop" : 1727273348492,
-            "duration" : 322
+            "start" : 1727273356902,
+            "stop" : 1727273357225,
+            "duration" : 323
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with max book id value", "200", "1", "2147483647", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "612f0084fbd6db0c",
+          "uid" : "41b903496d60a12f",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273348494,
-            "stop" : 1727273348822,
+            "start" : 1727273357227,
+            "stop" : 1727273357555,
             "duration" : 328
           },
           "flaky" : false,
@@ -347,103 +347,103 @@
           "parameters" : [ "v1", "Create a new Author with over the max book id value", "400", "1", "2147483648", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "7469df05b53554e6",
+          "uid" : "98e6efaa3cea9b29",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273348834,
-            "stop" : 1727273349154,
-            "duration" : 320
+            "start" : 1727273357557,
+            "stop" : 1727273357870,
+            "duration" : 313
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with negative book id value", "200", "1", "-1", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "9b31c7e604210468",
+          "uid" : "1c3a180ec63dfe25",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273349156,
-            "stop" : 1727273349475,
-            "duration" : 319
+            "start" : 1727273357872,
+            "stop" : 1727273358182,
+            "duration" : 310
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with min book id value", "200", "1", "-2147483648", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "d880acfb390a16b9",
+          "uid" : "6b9d88f443e0d0e3",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273349477,
-            "stop" : 1727273349804,
-            "duration" : 327
+            "start" : 1727273358184,
+            "stop" : 1727273358498,
+            "duration" : 314
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with below min book id value", "400", "1", "-2147483649", "John", "Doe", "qa" ]
         }, {
           "name" : "Creates a new author and validates the response and status code.",
-          "uid" : "72aa5861bd5c005b",
+          "uid" : "4ba5f8f2fce7dba3",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273349806,
-            "stop" : 1727273350128,
-            "duration" : 322
+            "start" : 1727273358500,
+            "stop" : 1727273358828,
+            "duration" : 328
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Author with non existing book id", "200", "1", "50000", "John", "Doe", "qa" ]
         }, {
           "name" : "Validates that the authors API is persisting authors",
-          "uid" : "457c3cc17fec1a42",
+          "uid" : "f9b46546e73c0c1a",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
-          "status" : "failed",
+          "status" : "broken",
           "time" : {
-            "start" : 1727273350133,
-            "stop" : 1727273351244,
-            "duration" : 1111
+            "start" : 1727273358834,
+            "stop" : 1727273359921,
+            "duration" : 1087
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "e34694a779ef9f2",
+          "uid" : "a4bd29bb0b27472f",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273351250,
-            "stop" : 1727273351567,
-            "duration" : 317
+            "start" : 1727273359928,
+            "stop" : 1727273360242,
+            "duration" : 314
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors lastName", "200", "1", "1", "John", "DoeUpdated", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "c31d1b1fc0ab449a",
+          "uid" : "2e0d1fba6bae787a",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273351569,
-            "stop" : 1727273351908,
-            "duration" : 339
+            "start" : 1727273360244,
+            "stop" : 1727273360562,
+            "duration" : 318
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors lastName with empty value", "200", "1", "1", "John", "", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "4936e7882b347b14",
+          "uid" : "b608a79e038130cc",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273351910,
-            "stop" : 1727273352231,
+            "start" : 1727273360564,
+            "stop" : 1727273360885,
             "duration" : 321
           },
           "flaky" : false,
@@ -451,286 +451,286 @@
           "parameters" : [ "v1", "Update existing Authors lastName with non utf-8 chars", "200", "1", "1", "John", "DoeΩπΩ", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "48f3d2cbdd9e5b6a",
+          "uid" : "7b3151fa9f3731fb",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273352232,
-            "stop" : 1727273352555,
-            "duration" : 323
+            "start" : 1727273360887,
+            "stop" : 1727273361211,
+            "duration" : 324
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors lastName with special characters", "200", "1", "1", "John", "Doe#@!{}", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "828d3fc03fdee725",
+          "uid" : "ccacb6942eb303b",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273352557,
-            "stop" : 1727273352874,
-            "duration" : 317
+            "start" : 1727273361213,
+            "stop" : 1727273361542,
+            "duration" : 329
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors lastName with spaces", "200", "1", "1", "John", " Do e ", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "95759cdf5e9b8ba8",
+          "uid" : "9b12513cba21fbe3",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273352876,
-            "stop" : 1727273353205,
-            "duration" : 329
+            "start" : 1727273361544,
+            "stop" : 1727273361863,
+            "duration" : 319
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors lastName with null value", "200", "1", "1", "John", "null", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "55a95ddc9806d400",
+          "uid" : "cca7c9a012215272",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273353207,
-            "stop" : 1727273353524,
-            "duration" : 317
+            "start" : 1727273361865,
+            "stop" : 1727273362186,
+            "duration" : 321
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName and lastName", "200", "3", "1", "JohnUpdated", "DoeUpdated", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "8a7252d2d6c6ae85",
+          "uid" : "8e5bc23b5c41191b",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273353526,
-            "stop" : 1727273353853,
-            "duration" : 327
+            "start" : 1727273362188,
+            "stop" : 1727273362537,
+            "duration" : 349
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName", "200", "2", "1", "JohnUpdated", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "e56e377e9cb6db9",
+          "uid" : "71c4d8c8dbbfaf7",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273353855,
-            "stop" : 1727273354181,
-            "duration" : 326
+            "start" : 1727273362540,
+            "stop" : 1727273362864,
+            "duration" : 324
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName with non utf-8 chars", "200", "1", "1", "JohnΩπΩ", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "b51f28526c4c4ee5",
+          "uid" : "5978d90910554dd",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273354183,
-            "stop" : 1727273354503,
-            "duration" : 320
+            "start" : 1727273362866,
+            "stop" : 1727273363181,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName with special characters", "200", "1", "1", "John#@!{}", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "6f784774462aec3d",
+          "uid" : "45a2f85e1d37a9ed",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273354505,
-            "stop" : 1727273354824,
-            "duration" : 319
+            "start" : 1727273363183,
+            "stop" : 1727273363498,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName with spaces", "200", "1", "1", " Joh n ", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "47229d380f28fd17",
+          "uid" : "caa7d3b8a5f96e18",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273354826,
-            "stop" : 1727273355149,
-            "duration" : 323
+            "start" : 1727273363500,
+            "stop" : 1727273363815,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName with null value", "200", "1", "1", "null", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "78474aeeae17088a",
+          "uid" : "d16f327357dae080",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273355151,
-            "stop" : 1727273355476,
-            "duration" : 325
+            "start" : 1727273363817,
+            "stop" : 1727273364149,
+            "duration" : 332
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors firstName with empty value", "200", "1", "1", "", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "8238028ddc7851e",
+          "uid" : "2b4fabc9349cc3b5",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273355477,
-            "stop" : 1727273355795,
-            "duration" : 318
+            "start" : 1727273364150,
+            "stop" : 1727273364464,
+            "duration" : 314
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors book id with valid value", "200", "1", "2", "", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "a8b4259117060c5a",
+          "uid" : "feccd97d1ba1cb11",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273355796,
-            "stop" : 1727273356131,
-            "duration" : 335
+            "start" : 1727273364466,
+            "stop" : 1727273364776,
+            "duration" : 310
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors book id with non existing book value", "200", "1", "600", "John", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "d176ed45c49aa706",
+          "uid" : "118ce11a5539c7cb",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273356133,
-            "stop" : 1727273356468,
-            "duration" : 335
+            "start" : 1727273364778,
+            "stop" : 1727273365100,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors book id with negative value", "200", "1", "-600", "John", "Doe", "qa" ]
         }, {
           "name" : "Updates author and validates the response and status code.",
-          "uid" : "26a16f91ba45ddd6",
+          "uid" : "333c6b67d9783f0e",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273356470,
-            "stop" : 1727273356817,
-            "duration" : 347
+            "start" : 1727273365102,
+            "stop" : 1727273365417,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Authors book id with over the max value", "400", "1", "2147483648", "John", "Doe", "qa" ]
         }, {
           "name" : "Validates that the authors API response is handling non existing ID values",
-          "uid" : "22cbe536097ec88e",
+          "uid" : "394ee59655d94ce8",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273356819,
-            "stop" : 1727273357151,
-            "duration" : 332
+            "start" : 1727273365418,
+            "stop" : 1727273365743,
+            "duration" : 325
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the authors API response is handling non existing ID values",
-          "uid" : "3e512865ed8c206e",
+          "uid" : "543824871fc10ff4",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "broken",
           "time" : {
-            "start" : 1727273357153,
-            "stop" : 1727273357901,
-            "duration" : 748
+            "start" : 1727273365745,
+            "stop" : 1727273366484,
+            "duration" : 739
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-          "uid" : "c9381445ffe1236f",
+          "uid" : "8cb198d747b24a38",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273357903,
-            "stop" : 1727273358480,
-            "duration" : 577
+            "start" : 1727273366487,
+            "stop" : 1727273366809,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the update authors API is persisting authors",
-          "uid" : "9eb3b45cbfd21e6d",
+          "uid" : "11a9013a45026423",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "failed",
           "time" : {
-            "start" : 1727273358482,
-            "stop" : 1727273359583,
-            "duration" : 1101
+            "start" : 1727273366811,
+            "stop" : 1727273367885,
+            "duration" : 1074
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the delete author API response deletes an author",
-          "uid" : "70f9a49d403dc44c",
+          "uid" : "2c2774e86620c348",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "failed",
           "time" : {
-            "start" : 1727273359585,
-            "stop" : 1727273360661,
-            "duration" : 1076
+            "start" : 1727273367889,
+            "stop" : 1727273368977,
+            "duration" : 1088
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the delete authors API response code is 400 for an invalid ID and response details are as expected",
-          "uid" : "40fd30765c6cd73a",
+          "uid" : "d9c911142ea647d8",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273360663,
-            "stop" : 1727273360982,
-            "duration" : 319
+            "start" : 1727273368979,
+            "stop" : 1727273369306,
+            "duration" : 327
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the authors API response is handling non existing ID values",
-          "uid" : "93cedc3b528ebfc1",
+          "uid" : "feb0dc89fb0724c9",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "failed",
           "time" : {
-            "start" : 1727273360984,
-            "stop" : 1727273361716,
-            "duration" : 732
+            "start" : 1727273369309,
+            "stop" : 1727273370061,
+            "duration" : 752
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the author ID parameter correctly.",
-          "uid" : "c33f7e41148de2db",
+          "uid" : "cc0c7f29213ea0af",
           "parentUid" : "5b58d1d209a91a7b574edcbf44933d78",
           "status" : "passed",
           "time" : {
-            "start" : 1727273361718,
-            "stop" : 1727273362053,
-            "duration" : 335
+            "start" : 1727273370063,
+            "stop" : 1727273370387,
+            "duration" : 324
           },
           "flaky" : false,
           "newFailed" : false,
@@ -745,559 +745,559 @@
         "name" : "tests.BooksTests",
         "children" : [ {
           "name" : "Validates that the Books API response contains all expected books and does not have any duplicates.",
-          "uid" : "878ab1dd4e42265a",
+          "uid" : "790d674743878f60",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273362099,
-            "stop" : 1727273363188,
-            "duration" : 1089
+            "start" : 1727273370432,
+            "stop" : 1727273371549,
+            "duration" : 1117
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the books API response contains all expected book details.",
-          "uid" : "68478009a53602ce",
+          "uid" : "28b469527448c54b",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273363283,
-            "stop" : 1727273363673,
-            "duration" : 390
+            "start" : 1727273371648,
+            "stop" : 1727273372022,
+            "duration" : 374
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the books API response code is 400 for an invalid ID and response details are as expected",
-          "uid" : "b2f31cd4bf1bac81",
+          "uid" : "2b7c2d5e1bd8198e",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273363675,
-            "stop" : 1727273364001,
-            "duration" : 326
+            "start" : 1727273372024,
+            "stop" : 1727273372340,
+            "duration" : 316
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the books API response code is 404 and response details are as expected",
-          "uid" : "9cbce685ec210aff",
+          "uid" : "aeaf806ce83dcae7",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273364003,
-            "stop" : 1727273364374,
-            "duration" : 371
+            "start" : 1727273372342,
+            "stop" : 1727273372732,
+            "duration" : 390
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
-          "uid" : "56d5f59b9df3a391",
+          "uid" : "a23ae53181dbd761",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273364376,
-            "stop" : 1727273364698,
-            "duration" : 322
+            "start" : 1727273372734,
+            "stop" : 1727273373052,
+            "duration" : 318
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "21901fd0aea3bdee",
+          "uid" : "fe52735871fb7920",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273364703,
-            "stop" : 1727273365025,
-            "duration" : 322
+            "start" : 1727273373058,
+            "stop" : 1727273373386,
+            "duration" : 328
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with valid data", "200", "0", "Book 1", "A compelling description of Book 1", "100", "An excerpt from Book 1", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "5cff90773b17090f",
+          "uid" : "8eb42f005dd43806",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273365027,
-            "stop" : 1727273365347,
-            "duration" : 320
+            "start" : 1727273373389,
+            "stop" : 1727273373711,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with empty title", "400", "0", "", "A compelling description of the book", "100", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "d0f816a1a3960a52",
+          "uid" : "1602ca64a46e4dac",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273365350,
-            "stop" : 1727273365663,
-            "duration" : 313
+            "start" : 1727273373715,
+            "stop" : 1727273374035,
+            "duration" : 320
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with null title", "400", "0", "null", "A compelling description of the book", "100", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "8d13fda873f0f7bf",
+          "uid" : "72a4a9064162528f",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273365666,
-            "stop" : 1727273365989,
-            "duration" : 323
+            "start" : 1727273374038,
+            "stop" : 1727273374357,
+            "duration" : 319
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with null description", "200", "0", "Book 2", "null", "150", "An excerpt from Book 2", "2024-09-25T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "eaf84686ade8ce37",
+          "uid" : "9713c3c434a918a2",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273365992,
-            "stop" : 1727273366327,
-            "duration" : 335
+            "start" : 1727273374359,
+            "stop" : 1727273374677,
+            "duration" : 318
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with empty description", "200", "0", "Book 3", "", "120", "An excerpt from Book 3", "2024-09-26T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "c4d1e7e8f351a4ef",
+          "uid" : "6ccef314e1fd757e",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273366329,
-            "stop" : 1727273366648,
-            "duration" : 319
+            "start" : 1727273374679,
+            "stop" : 1727273374988,
+            "duration" : 309
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with null pageCount", "400", "0", "Book 4", "A compelling description of Book 4", "0", "An excerpt from Book 4", "2024-09-27T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "1b1fad9cc3cf3455",
+          "uid" : "11eb35b329c3aa1d",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273366651,
-            "stop" : 1727273366963,
-            "duration" : 312
+            "start" : 1727273374991,
+            "stop" : 1727273375313,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with 0 pageCount", "200", "0", "Book 5", "A compelling description of Book 5", "0", "An excerpt from Book 5", "2024-09-28T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "b562fb93d43440eb",
+          "uid" : "a948c7a8f92c5987",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273366966,
-            "stop" : 1727273367289,
-            "duration" : 323
+            "start" : 1727273375316,
+            "stop" : 1727273375629,
+            "duration" : 313
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with negative pageCount", "400", "0", "Book 6", "A compelling description of Book 6", "-1", "An excerpt from Book 6", "2024-09-29T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "5e2cbfc5b85c7326",
+          "uid" : "b5e1ca7dd30f7e2c",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273367292,
-            "stop" : 1727273367638,
-            "duration" : 346
+            "start" : 1727273375632,
+            "stop" : 1727273375950,
+            "duration" : 318
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with null publishDate", "200", "0", "Book 7", "A compelling description of Book 7", "300", "An excerpt from Book 7", "null", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "8113ba1fdb8531b6",
+          "uid" : "dbea5b75123b9f26",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273367641,
-            "stop" : 1727273367960,
-            "duration" : 319
+            "start" : 1727273375952,
+            "stop" : 1727273376277,
+            "duration" : 325
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with non-UTF8 title", "200", "0", "ΩπΩ", "A compelling description of a book", "200", "An excerpt from the book", "2024-09-30T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "3f5f51fda771be4",
+          "uid" : "4a572761ca092f0f",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273367962,
-            "stop" : 1727273368280,
-            "duration" : 318
+            "start" : 1727273376279,
+            "stop" : 1727273376602,
+            "duration" : 323
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with special characters in title", "200", "0", "!@#$%^&*", "A compelling description of a book", "200", "An excerpt from the book", "2024-10-01T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "5f2fa18a243a3296",
+          "uid" : "b4cd27441a6eaafd",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273368282,
-            "stop" : 1727273368597,
-            "duration" : 315
+            "start" : 1727273376605,
+            "stop" : 1727273376937,
+            "duration" : 332
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with large pageCount", "200", "0", "Book 8", "A compelling description of Book 8", "10000", "An excerpt from Book 8", "2024-10-02T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "9966040f678f5b02",
+          "uid" : "81fd1484f88423c0",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273368599,
-            "stop" : 1727273368926,
-            "duration" : 327
+            "start" : 1727273376939,
+            "stop" : 1727273377276,
+            "duration" : 337
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with over the max id value", "400", "2147483648", "Book 9", "A compelling description of Book 9", "250", "An excerpt from Book 9", "2024-10-03T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Creates a new Book and validates the response and status code.",
-          "uid" : "e1c71a0b80dc4e18",
+          "uid" : "59e622f8afde7a01",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273368929,
-            "stop" : 1727273369256,
-            "duration" : 327
+            "start" : 1727273377279,
+            "stop" : 1727273377603,
+            "duration" : 324
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Create a new Book with negative id value", "200", "-1", "Book 10", "A compelling description of Book 10", "100", "An excerpt from Book 10", "2024-10-04T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Validates that the Books API is persisting Books",
-          "uid" : "63f16f563a722b0",
+          "uid" : "39ce6acb100e7c08",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273369258,
-            "stop" : 1727273370981,
-            "duration" : 1723
+            "start" : 1727273377605,
+            "stop" : 1727273379322,
+            "duration" : 1717
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "c9372ac2d4d2de8f",
+          "uid" : "99b3d823279459fa",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273370985,
-            "stop" : 1727273371297,
-            "duration" : 312
+            "start" : 1727273379327,
+            "stop" : 1727273379650,
+            "duration" : 323
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book title", "200", "1", "Updated Book Title", "A compelling description of the updated book", "150", "An updated excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "ad73a6cd0ba138c4",
+          "uid" : "3758c331182b558c",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273371299,
-            "stop" : 1727273371618,
-            "duration" : 319
+            "start" : 1727273379652,
+            "stop" : 1727273379979,
+            "duration" : 327
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book title with empty value", "400", "1", "", "A compelling description of the book", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "2a7e048c195c2941",
+          "uid" : "40748c715fbc6d3b",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273371620,
-            "stop" : 1727273371940,
-            "duration" : 320
+            "start" : 1727273379981,
+            "stop" : 1727273380303,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book title with non utf-8 characters", "200", "1", "ΩπΩ", "A compelling description of the book", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "8775b60a278e09f3",
+          "uid" : "edb0efebd14d5e5e",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273371942,
-            "stop" : 1727273372258,
-            "duration" : 316
+            "start" : 1727273380305,
+            "stop" : 1727273380632,
+            "duration" : 327
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book title with special characters", "200", "1", "!#@{}[]", "A compelling description of the book", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "eb4d14f1603563af",
+          "uid" : "ca4159104d636133",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273372260,
-            "stop" : 1727273372573,
-            "duration" : 313
+            "start" : 1727273380634,
+            "stop" : 1727273380964,
+            "duration" : 330
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book description", "200", "1", "Updated Book Title", "Updated description of the book", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "a56eb5fb41b8e48e",
+          "uid" : "c367f659f6b33117",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273372575,
-            "stop" : 1727273372889,
-            "duration" : 314
+            "start" : 1727273380967,
+            "stop" : 1727273381278,
+            "duration" : 311
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book description with empty value", "200", "1", "Updated Book Title", "", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "2e46bd37a5172bc1",
+          "uid" : "e89e8c8d66bd635a",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273372891,
-            "stop" : 1727273373205,
-            "duration" : 314
+            "start" : 1727273381280,
+            "stop" : 1727273381597,
+            "duration" : 317
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book pageCount", "200", "2", "Book 2", "A compelling description of Book 2", "500", "An excerpt from Book 2", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "c52877e2596e76f8",
+          "uid" : "48fbf377ca94bb8c",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273373206,
-            "stop" : 1727273373527,
-            "duration" : 321
+            "start" : 1727273381599,
+            "stop" : 1727273381917,
+            "duration" : 318
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book pageCount with zero value", "200", "2", "Book 2", "A compelling description of Book 2", "0", "An excerpt from Book 2", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "56fe613fe66cf90f",
+          "uid" : "fdeffc012aa8ae1f",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273373529,
-            "stop" : 1727273373860,
-            "duration" : 331
+            "start" : 1727273381919,
+            "stop" : 1727273382248,
+            "duration" : 329
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book pageCount with negative value", "400", "2", "Book 2", "A compelling description of Book 2", "-100", "An excerpt from Book 2", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "ae7874a8cc39b0b8",
+          "uid" : "2f2c7dba473be297",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273373862,
-            "stop" : 1727273374180,
-            "duration" : 318
+            "start" : 1727273382250,
+            "stop" : 1727273382586,
+            "duration" : 336
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with null publishDate", "200", "2", "Book 2", "A compelling description of Book 2", "150", "An excerpt from Book 2", "null", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "495fc6953c9d00fb",
+          "uid" : "27653ff23e69fe5e",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273374182,
-            "stop" : 1727273374499,
-            "duration" : 317
+            "start" : 1727273382588,
+            "stop" : 1727273382902,
+            "duration" : 314
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with special characters in excerpt", "200", "3", "Book 3", "A compelling description of Book 3", "200", "!#@{}[] excerpt", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "689f68a0e1559aa1",
+          "uid" : "8222b38f5d5fc1ac",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273374501,
-            "stop" : 1727273374824,
-            "duration" : 323
+            "start" : 1727273382904,
+            "stop" : 1727273383219,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with spaces in title", "200", "4", " Book Title ", "A compelling description of Book 4", "250", "An excerpt from Book 4", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "3cca26bf8f79e180",
+          "uid" : "f128c5ae7db3800b",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273374827,
-            "stop" : 1727273375141,
-            "duration" : 314
+            "start" : 1727273383222,
+            "stop" : 1727273383543,
+            "duration" : 321
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with non-UTF8 characters in title", "200", "5", "ΩπΩ", "A compelling description of Book 5", "300", "An excerpt from Book 5", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "c1e80d675cf9275a",
+          "uid" : "7185434a93f28dd7",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273375143,
-            "stop" : 1727273375459,
-            "duration" : 316
+            "start" : 1727273383545,
+            "stop" : 1727273383867,
+            "duration" : 322
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with over max id value", "400", "2147483648", "Book with over max id", "A compelling description of the book", "150", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Updates Book and validates the response and status code.",
-          "uid" : "c520cbb0cbda3695",
+          "uid" : "50c8d634217b79dc",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273375461,
-            "stop" : 1727273375773,
-            "duration" : 312
+            "start" : 1727273383868,
+            "stop" : 1727273384183,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "Update existing Book with negative id value", "200", "-1", "Book with negative id", "A compelling description of the book", "100", "An excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
         }, {
           "name" : "Validates that the Books API response is handling non existing ID values",
-          "uid" : "1e5008e743801151",
+          "uid" : "d6c66690e7fc6bae",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273375775,
-            "stop" : 1727273376096,
-            "duration" : 321
+            "start" : 1727273384184,
+            "stop" : 1727273384525,
+            "duration" : 341
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the Books API response is handling non existing ID values",
-          "uid" : "64a933fd242057e7",
+          "uid" : "99a90b00d6d0628",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273376098,
-            "stop" : 1727273377385,
-            "duration" : 1287
+            "start" : 1727273384527,
+            "stop" : 1727273385964,
+            "duration" : 1437
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
-          "uid" : "d1b8f0ab07824b8e",
+          "uid" : "30e47f95c880043a",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273377387,
-            "stop" : 1727273377704,
-            "duration" : 317
+            "start" : 1727273385966,
+            "stop" : 1727273386276,
+            "duration" : 310
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the update Books API is persisting Books",
-          "uid" : "3b2714843fecf85f",
+          "uid" : "f3bd061c39d1bf98",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273377706,
-            "stop" : 1727273379381,
-            "duration" : 1675
+            "start" : 1727273386278,
+            "stop" : 1727273388015,
+            "duration" : 1737
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the delete Book API response deletes an Book",
-          "uid" : "1f4363c6135eaefd",
+          "uid" : "2b0495f8a3cc5b25",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273379383,
-            "stop" : 1727273381039,
-            "duration" : 1656
+            "start" : 1727273388019,
+            "stop" : 1727273389697,
+            "duration" : 1678
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the delete Books API response code is 400 for an invalid ID and response details are as expected",
-          "uid" : "104da2eebb4917bf",
+          "uid" : "41d6734e35d37035",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273381041,
-            "stop" : 1727273381374,
-            "duration" : 333
+            "start" : 1727273389699,
+            "stop" : 1727273390014,
+            "duration" : 315
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the Books API response is handling non existing ID values",
-          "uid" : "73d49665d6d0e203",
+          "uid" : "e28a66c9f6f71dda",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "failed",
           "time" : {
-            "start" : 1727273381375,
-            "stop" : 1727273382720,
-            "duration" : 1345
+            "start" : 1727273390015,
+            "stop" : 1727273391416,
+            "duration" : 1401
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ "v1", "qa" ]
         }, {
           "name" : "Validates that the API handles SQL injection attempts in the Book ID parameter correctly.",
-          "uid" : "28194aca755dd761",
+          "uid" : "2a33450f2769e774",
           "parentUid" : "dfdfb589daf6aeb2887a84fdfcf7a4c7",
           "status" : "passed",
           "time" : {
-            "start" : 1727273382722,
-            "stop" : 1727273383038,
-            "duration" : 316
+            "start" : 1727273391418,
+            "stop" : 1727273391725,
+            "duration" : 307
           },
           "flaky" : false,
           "newFailed" : false,
