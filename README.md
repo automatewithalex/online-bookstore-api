@@ -12,7 +12,7 @@ For windows:
 
 For linux:
 - [Git](https://git-scm.com/downloads/linux)
-- [Java 23 JDK](https://www.oracle.com/java/technologies/downloads/#jdk23-linux))
+- [Java 23 JDK](https://www.oracle.com/java/technologies/downloads/#jdk23-linux)
 - [Maven Binaries](https://maven.apache.org/download.cgi)
 - [Allure](https://allurereport.org/docs/install-for-linux/)
 
