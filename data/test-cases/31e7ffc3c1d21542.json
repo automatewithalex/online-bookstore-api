@@ -1,0 +1,143 @@
+{
+  "uid" : "31e7ffc3c1d21542",
+  "name" : "Updates author and validates the response and status code.",
+  "fullName" : "tests.AuthorsTests.testUpdateAuthor",
+  "historyId" : "191f16b0600a86cc2f397032782381a1",
+  "time" : {
+    "start" : 1727279838279,
+    "stop" : 1727279838584,
+    "duration" : 305
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727279825603,
+      "stop" : 1727279825866,
+      "duration" : 263
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupAuthorsTestConfig",
+    "time" : {
+      "start" : 1727279825867,
+      "stop" : 1727279825970,
+      "duration" : 103
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727279846240,
+      "stop" : 1727279846241,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testUpdateAuthor"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Authors tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az702-359"
+  }, {
+    "name" : "thread",
+    "value" : "1815@fv-az702-359.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-004"
+  }, {
+    "name" : "epic",
+    "value" : "Authors Management"
+  }, {
+    "name" : "feature",
+    "value" : "Update Author"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "arg0",
+    "value" : "Update existing Authors lastName with spaces"
+  }, {
+    "name" : "arg1",
+    "value" : "200"
+  }, {
+    "name" : "arg2",
+    "value" : "1"
+  }, {
+    "name" : "arg3",
+    "value" : "1"
+  }, {
+    "name" : "arg4",
+    "value" : "John"
+  }, {
+    "name" : "arg5",
+    "value" : " Do e "
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "31e7ffc3c1d21542.json",
+  "parameterValues" : [ "v1", "Update existing Authors lastName with spaces", "200", "1", "1", "John", " Do e ", "qa" ]
+}

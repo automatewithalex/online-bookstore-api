@@ -1,0 +1,143 @@
+{
+  "uid" : "6319f93e93d8ac1c",
+  "name" : "Updates author and validates the response and status code.",
+  "fullName" : "tests.AuthorsTests.testUpdateAuthor",
+  "historyId" : "81b718013b30c4589084e22b74e7e11d",
+  "time" : {
+    "start" : 1727279841392,
+    "stop" : 1727279841669,
+    "duration" : 277
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727279825603,
+      "stop" : 1727279825866,
+      "duration" : 263
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupAuthorsTestConfig",
+    "time" : {
+      "start" : 1727279825867,
+      "stop" : 1727279825970,
+      "duration" : 103
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727279846240,
+      "stop" : 1727279846241,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testUpdateAuthor"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Authors tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az702-359"
+  }, {
+    "name" : "thread",
+    "value" : "1815@fv-az702-359.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-004"
+  }, {
+    "name" : "epic",
+    "value" : "Authors Management"
+  }, {
+    "name" : "feature",
+    "value" : "Update Author"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "arg0",
+    "value" : "Update existing Authors book id with negative value"
+  }, {
+    "name" : "arg1",
+    "value" : "200"
+  }, {
+    "name" : "arg2",
+    "value" : "1"
+  }, {
+    "name" : "arg3",
+    "value" : "-600"
+  }, {
+    "name" : "arg4",
+    "value" : "John"
+  }, {
+    "name" : "arg5",
+    "value" : "Doe"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6319f93e93d8ac1c.json",
+  "parameterValues" : [ "v1", "Update existing Authors book id with negative value", "200", "1", "-600", "John", "Doe", "qa" ]
+}
