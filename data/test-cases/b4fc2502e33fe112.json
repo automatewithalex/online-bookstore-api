@@ -1,0 +1,125 @@
+{
+  "uid" : "b4fc2502e33fe112",
+  "name" : "Validates that the books API response code is 404 and response details are as expected",
+  "fullName" : "tests.BooksTests.testBooksApiGetByNonExistentID",
+  "historyId" : "c4b93c6f61d16df7622f374b09147a9e",
+  "time" : {
+    "start" : 1727271956428,
+    "stop" : 1727271956946,
+    "duration" : 518
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727271953672,
+      "stop" : 1727271953673,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupBooksTestConfig",
+    "time" : {
+      "start" : 1727271953673,
+      "stop" : 1727271953676,
+      "duration" : 3
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727271984383,
+      "stop" : 1727271984383,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testBooksApiGetByNonExistentID"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Books tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1385-514"
+  }, {
+    "name" : "thread",
+    "value" : "1827@fv-az1385-514.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-007"
+  }, {
+    "name" : "feature",
+    "value" : "Get Book"
+  }, {
+    "name" : "epic",
+    "value" : "Books Management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "b4fc2502e33fe112.json",
+  "parameterValues" : [ "v1", "qa" ]
+}

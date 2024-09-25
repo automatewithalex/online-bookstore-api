@@ -1,0 +1,161 @@
+{
+  "uid" : "8a841656f59ead4e",
+  "name" : "Updates Book and validates the response and status code.",
+  "fullName" : "tests.BooksTests.testUpdateBook",
+  "historyId" : "10b3db397d0d68fad0265af8b6ea731d",
+  "time" : {
+    "start" : 1727271966564,
+    "stop" : 1727271967034,
+    "duration" : 470
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727271953672,
+      "stop" : 1727271953673,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupBooksTestConfig",
+    "time" : {
+      "start" : 1727271953673,
+      "stop" : 1727271953676,
+      "duration" : 3
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727271984383,
+      "stop" : 1727271984383,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testUpdateBook"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Books tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1385-514"
+  }, {
+    "name" : "thread",
+    "value" : "1827@fv-az1385-514.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-009"
+  }, {
+    "name" : "feature",
+    "value" : "Update Book"
+  }, {
+    "name" : "epic",
+    "value" : "Books Management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "arg0",
+    "value" : "Update existing Book title"
+  }, {
+    "name" : "arg1",
+    "value" : "200"
+  }, {
+    "name" : "arg2",
+    "value" : "1"
+  }, {
+    "name" : "arg3",
+    "value" : "Updated Book Title"
+  }, {
+    "name" : "arg4",
+    "value" : "A compelling description of the updated book"
+  }, {
+    "name" : "arg5",
+    "value" : "150"
+  }, {
+    "name" : "arg6",
+    "value" : "An updated excerpt from the book"
+  }, {
+    "name" : "arg7",
+    "value" : "2024-09-24T18:50:41.722Z"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ {
+    "name" : "DE-015",
+    "url" : "https://jira.example.com/browse/DE-015",
+    "type" : "issue"
+  }, {
+    "name" : "DE-016",
+    "url" : "https://jira.example.com/browse/DE-016",
+    "type" : "issue"
+  }, {
+    "name" : "DE-014",
+    "url" : "https://jira.example.com/browse/DE-014",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8a841656f59ead4e.json",
+  "parameterValues" : [ "v1", "Update existing Book title", "200", "1", "Updated Book Title", "A compelling description of the updated book", "150", "An updated excerpt from the book", "2024-09-24T18:50:41.722Z", "qa" ]
+}
