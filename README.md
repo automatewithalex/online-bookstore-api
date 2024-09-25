@@ -1,14 +1,20 @@
 # Online Bookstore API
 
-This is an automated testing project for the **Online Bookstore API**, built using **Java**, **TestNG**, **RestAssured**, and **Allure** for reporting. The project includes API tests for managing books and authors, covering operations like creating, updating, retrieving, and deleting entities.
-
-## Project Structure
+This is an automated testing project for the **Online Bookstore API**, built using **Java**, **Maven**, **TestNG**, **RestAssured**, and **Allure** for reporting. The project includes API tests for managing books and authors, covering operations like creating, updating, retrieving, and deleting entities.
 
 ## Prerequisites
 
-- **Java 23**
-- **Maven**
-- **Allure**
+For windows:
+- [Git](https://git-scm.com/downloads/win)
+- [Java 23 JDK](https://www.oracle.com/java/technologies/downloads/#jdk23-windows)
+- [Maven Binaries](https://maven.apache.org/download.cgi)
+- [Allure](https://allurereport.org/docs/install-for-windows/)
+
+For linux:
+- [Git](https://git-scm.com/downloads/linux)
+- [Java 23 JDK](https://www.oracle.com/java/technologies/downloads/#jdk23-linux))
+- [Maven Binaries](https://maven.apache.org/download.cgi)
+- [Allure](https://allurereport.org/docs/install-for-linux/)
 
 ## Setup
 
@@ -31,7 +37,7 @@ This is an automated testing project for the **Online Bookstore API**, built usi
 1. **To run the API tests with Maven**:
 
     ```bash
-    mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
+    mvn clean test -Dsurefire.suiteXmlFiles=testng.xml -Dlog.level=info
 
 2. **After running the tests, generate the Allure report**:
     
@@ -64,3 +70,4 @@ The latest Allure report is available on GitHub Pages:
 - **Allure**: Detailed test reporting with visual insights.
 - **Data-Driven Tests**: Utilizes data providers for parameterized testing.
 - **CI/CD Integration**: Automated test runs and report generation on GitHub Actions.
+- **Logging**: Logging info, debug and error information about the tests
