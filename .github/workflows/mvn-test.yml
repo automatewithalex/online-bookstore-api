@@ -26,24 +26,40 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-maven
 
+      # Step 1: Clean the previous allure-results
+      - name: Clean allure-results directory
+        run: rm -rf target/allure-results
+
+      # Step 2: Copy history from the previous allure report into allure-results
+      - name: Copy Allure history
+        run: |
+          if [ -d "target/site/allure-maven-plugin/history" ]; then
+            cp -r target/site/allure-maven-plugin/history target/allure-results/
+          fi
+
+      # Step 3: Run the tests
       - name: Run tests with TestNG
         run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml -Dmaven.test.failure.ignore=true -Dlog.level=info
 
+      # Step 4: Generate Allure Report
       - name: Generate Allure Report
         run: mvn allure:report
 
+      # Step 5: Upload Allure Results as artifacts
       - name: Upload Allure Results
         uses: actions/upload-artifact@v3
         with:
           name: allure-results
           path: target/allure-results
 
+      # Step 6: Upload Allure Report as artifacts
       - name: Upload Allure Report
         uses: actions/upload-artifact@v3
         with:
           name: allure-report
           path: target/site/allure-maven-plugin
 
+      # Step 7: Deploy Allure Report to GitHub Pages and retain history
       - name: Deploy Allure Report to GitHub Pages with History
         if: success()
         run: |
