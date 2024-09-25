@@ -51,7 +51,7 @@ jobs:
           git config --global user.name "Aleksandar Stojanovic"
           git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
           rm -rf *
-          cp -r target/site/allure-maven-plugin/*
+          cp -r target/site/allure-maven-plugin/* .
           git add .
           git commit -m "Update Allure Report"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
