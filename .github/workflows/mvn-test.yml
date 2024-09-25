@@ -3,7 +3,7 @@ name: Run Tests and Generate Allure Report
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   test:
