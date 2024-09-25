@@ -1,0 +1,143 @@
+{
+  "uid" : "5ee6908cd250d9ae",
+  "name" : "Creates a new author and validates the response and status code.",
+  "fullName" : "tests.AuthorsTests.testCreateNewAuthor",
+  "historyId" : "43ac5caafc5b0e27531f9836e7bf3d56",
+  "time" : {
+    "start" : 1727284836157,
+    "stop" : 1727284836445,
+    "duration" : 288
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727284831799,
+      "stop" : 1727284832055,
+      "duration" : 256
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupAuthorsTestConfig",
+    "time" : {
+      "start" : 1727284832056,
+      "stop" : 1727284832146,
+      "duration" : 90
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727284852835,
+      "stop" : 1727284852835,
+      "duration" : 0
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCreateNewAuthor"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Authors tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.AuthorsTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az659-683"
+  }, {
+    "name" : "thread",
+    "value" : "1832@fv-az659-683.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-003"
+  }, {
+    "name" : "epic",
+    "value" : "Authors Management"
+  }, {
+    "name" : "feature",
+    "value" : "Create Author"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "arg0",
+    "value" : "Create a new Author with null book id"
+  }, {
+    "name" : "arg1",
+    "value" : "400"
+  }, {
+    "name" : "arg2",
+    "value" : "1"
+  }, {
+    "name" : "arg3",
+    "value" : "null"
+  }, {
+    "name" : "arg4",
+    "value" : "John"
+  }, {
+    "name" : "arg5",
+    "value" : "Doe"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "5ee6908cd250d9ae.json",
+  "parameterValues" : [ "v1", "Create a new Author with null book id", "400", "1", "null", "John", "Doe", "qa" ]
+}
