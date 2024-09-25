@@ -163,9 +163,7 @@ public class BooksTests extends BaseTest {
             @Issue("DE-008"),
             @Issue("DE-009"),
             @Issue("DE-010"),
-            @Issue("DE-011"),
-            @Issue("DE-012"),
-            @Issue("DE-013")
+            @Issue("DE-011")
     })
     @Test(dataProvider = "createBookDataProvider", dataProviderClass = DataProviders.class, description = "Creates a new Book and validates the response and status code.", testName = "POST", priority = 1)
     public void testCreateNewBook(String testName, int expectedStatusCode, Long id, String title, String description, int pageCount, String excerpt, String publishDate) throws JsonProcessingException {
