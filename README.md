@@ -82,6 +82,4 @@ This project is integrated with **GitHub Actions** for continuous integration. O
 - Artifacts (Allure results and reports) are saved.
 
 ## Viewing the Allure Report
-The latest Allure report is available on GitHub Pages:
-
-[View Allure Report](https://automatewithalex.github.io/online-bookstore-api)
+The latest Allure report is available on GitHub Pages: [View Allure Report](https://automatewithalex.github.io/online-bookstore-api)
