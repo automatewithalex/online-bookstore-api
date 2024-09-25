@@ -3,7 +3,7 @@ name: Run Tests and Generate Allure Report
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -44,14 +44,25 @@ jobs:
           name: allure-report
           path: target/site/allure-maven-plugin
 
-      - name: Deploy Allure Report to GitHub Pages
+      - name: Deploy Allure Report to GitHub Pages with History
         if: success()
         run: |
           git config --global user.email "aleksandar.stojanovic@qakursevionline.com"
           git config --global user.name "Aleksandar Stojanovic"
+          
+          # Clone gh-pages branch
           git clone --branch gh-pages https://github.com/${{ github.repository }} gh-pages
+          
+          # Copy existing history directory if available
+          if [ -d "gh-pages/history" ]; then
+            cp -r gh-pages/history target/site/allure-maven-plugin/
+          fi
+          
+          # Copy new report to gh-pages
           cp -r target/site/allure-maven-plugin/* gh-pages/
+          
+          # Push updated report with history to gh-pages
           cd gh-pages
           git add .
-          git commit -m "Update Allure Report"
+          git commit -m "Update Allure Report with History"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} gh-pages
