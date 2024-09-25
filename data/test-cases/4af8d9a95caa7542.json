@@ -1,0 +1,135 @@
+{
+  "uid" : "4af8d9a95caa7542",
+  "name" : "Validates that the books API response contains all expected book details.",
+  "fullName" : "tests.BooksTests.testBooksApiGetByID",
+  "historyId" : "4acbae3bf4cc2dcf0c2d38b9b326469a",
+  "time" : {
+    "start" : 1727283161432,
+    "stop" : 1727283161965,
+    "duration" : 533
+  },
+  "status" : "failed",
+  "statusMessage" : "Expected object:\nGetBooksResponse{id=1, title='Book 1', description='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', pageCount=100, excerpt='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', publishDate='2024-09-23T18:13:02.9706647+00:00'}\nbut got:\nGetBooksResponse{id=1, title='Book 1', description='Facer volutpat nonumy nibh kasd sadipscing duo sea odio. Sea possim dolor diam amet eleifend dolor lorem. Consectetuer at eirmod ea aliquip est imperdiet et sanctus ut aliquam sanctus accusam sadipscing ad. Vel sadipscing dolor sit esse. Sed et sed nonummy aliquyam sea consetetur iriure et magna sadipscing feugiat est. Ipsum odio sanctus ut qui et clita takimata invidunt. Invidunt sit takimata aliquam sit takimata at dolore dolor ea labore duis liber accusam at. Voluptua amet sea dolor stet sea aliquyam stet velit esse eirmod labore et nostrud takimata duo. Diam dolor sit sit at consetetur invidunt at vulputate amet diam dolore ex amet sit amet wisi.\n', pageCount=100, excerpt='Lorem ut eirmod duis sed vel et stet et sed et at sea esse feugiat eu clita vero. Sit amet eos dolor iusto ad ipsum magna et et dolore labore vel magna nonumy aliquam. Nonumy ipsum consetetur euismod sadipscing minim et labore liber. Eu ea et ipsum eos at tempor. Consectetuer diam et duo et kasd stet labore nulla. Vero soluta sadipscing ipsum ea diam diam dolor rebum. At vel takimata erat duo no minim elit.\nIpsum no sadipscing ea. Eum molestie nonumy zzril dolore clita at takimata dolores kasd ipsum veniam commodo amet consetetur consequat. Clita nulla invidunt ea ipsum diam gubergren sea eum facilisis et dolore justo rebum consetetur sea magna dolor. Sit adipiscing dolore dignissim augue nostrud sea duo et kasd duo. Blandit duo et ipsum augue consetetur vero diam eum vulputate et tempor et sanctus sit. Dolor hendrerit soluta.\nEleifend et augue aliquyam. Te labore amet eos dolor sadipscing augue eu dignissim diam dolor dolores adipiscing stet sea sit duo te diam. Eirmod placerat sit. Et vero augue illum no dolor dolore nulla justo amet ipsum ut sed volutpat. Amet iriure invidunt et kasd qui erat aliquyam velit ullamcorper ut consectetuer sanctus. Labore sanctus justo voluptua tempor consectetuer consetetur stet consetetur accusam soluta lorem et lorem. Sed et et et est. Laoreet sit et dolor vulputate elitr sed no no enim molestie erat et labore sit labore no accumsan. Erat dignissim vel. Dolores diam duis rebum ut gubergren. Qui dolores dolor sit sed. Dolor vero aliquyam no dolores est consequat accusam ea at amet rebum.\nStet et magna voluptua et at sit eirmod amet voluptua nihil tation ipsum diam rebum et sed. Eos in vulputate ut consetetur. Clita et diam rebum dolor magna rebum ex velit ea nonumy lobortis et voluptua magna aliquip. Euismod erat dolor magna.\nEnim ullamcorper ad magna dolor no facilisis ut diam aliquyam et amet invidunt dolor. Dolores duis amet dolor at labore sit eu consequat sit accusam justo nobis sea takimata diam. Tempor diam dolore. Takimata et dolores sed kasd. Clita ea eu te amet lobortis qui diam commodo sed amet dolores invidunt dolor sed. Diam voluptua vulputate at et. Et elitr sit gubergren illum dolor sed minim diam sanctus ea gubergren sanctus no duo diam diam sit dolor. Sed sit erat accusam molestie invidunt aliquyam doming vero in justo ut eos. Amet diam ea ut vero diam ea dolore lorem consetetur dolor ad sea vel consetetur dolor lorem vel. Ut exerci ipsum dolor voluptua eos ea volutpat dolor elitr dolor liber aliquyam est ea aliquyam eum clita elitr. Facilisis sit doming sit ut justo elitr sed et luptatum et hendrerit at takimata accusam ipsum aliquyam sadipscing. Clita quod et dolor et ipsum. Et no elitr nobis et in takimata accusam dignissim eleifend. Vero vero vero ea accusam esse vel et kasd nulla eos amet consectetuer labore ea diam no congue. Lorem et ipsum stet aliquyam amet invidunt ea volutpat eleifend.\n', publishDate='2024-09-24T16:52:41.8257224+00:00'} expected [GetBooksResponse{id=1, title='Book 1', description='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', pageCount=100, excerpt='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', publishDate='2024-09-23T18:13:02.9706647+00:00'}] but found [GetBooksResponse{id=1, title='Book 1', description='Facer volutpat nonumy nibh kasd sadipscing duo sea odio. Sea possim dolor diam amet eleifend dolor lorem. Consectetuer at eirmod ea aliquip est imperdiet et sanctus ut aliquam sanctus accusam sadipscing ad. Vel sadipscing dolor sit esse. Sed et sed nonummy aliquyam sea consetetur iriure et magna sadipscing feugiat est. Ipsum odio sanctus ut qui et clita takimata invidunt. Invidunt sit takimata aliquam sit takimata at dolore dolor ea labore duis liber accusam at. Voluptua amet sea dolor stet sea aliquyam stet velit esse eirmod labore et nostrud takimata duo. Diam dolor sit sit at consetetur invidunt at vulputate amet diam dolore ex amet sit amet wisi.\n', pageCount=100, excerpt='Lorem ut eirmod duis sed vel et stet et sed et at sea esse feugiat eu clita vero. Sit amet eos dolor iusto ad ipsum magna et et dolore labore vel magna nonumy aliquam. Nonumy ipsum consetetur euismod sadipscing minim et labore liber. Eu ea et ipsum eos at tempor. Consectetuer diam et duo et kasd stet labore nulla. Vero soluta sadipscing ipsum ea diam diam dolor rebum. At vel takimata erat duo no minim elit.\nIpsum no sadipscing ea. Eum molestie nonumy zzril dolore clita at takimata dolores kasd ipsum veniam commodo amet consetetur consequat. Clita nulla invidunt ea ipsum diam gubergren sea eum facilisis et dolore justo rebum consetetur sea magna dolor. Sit adipiscing dolore dignissim augue nostrud sea duo et kasd duo. Blandit duo et ipsum augue consetetur vero diam eum vulputate et tempor et sanctus sit. Dolor hendrerit soluta.\nEleifend et augue aliquyam. Te labore amet eos dolor sadipscing augue eu dignissim diam dolor dolores adipiscing stet sea sit duo te diam. Eirmod placerat sit. Et vero augue illum no dolor dolore nulla justo amet ipsum ut sed volutpat. Amet iriure invidunt et kasd qui erat aliquyam velit ullamcorper ut consectetuer sanctus. Labore sanctus justo voluptua tempor consectetuer consetetur stet consetetur accusam soluta lorem et lorem. Sed et et et est. Laoreet sit et dolor vulputate elitr sed no no enim molestie erat et labore sit labore no accumsan. Erat dignissim vel. Dolores diam duis rebum ut gubergren. Qui dolores dolor sit sed. Dolor vero aliquyam no dolores est consequat accusam ea at amet rebum.\nStet et magna voluptua et at sit eirmod amet voluptua nihil tation ipsum diam rebum et sed. Eos in vulputate ut consetetur. Clita et diam rebum dolor magna rebum ex velit ea nonumy lobortis et voluptua magna aliquip. Euismod erat dolor magna.\nEnim ullamcorper ad magna dolor no facilisis ut diam aliquyam et amet invidunt dolor. Dolores duis amet dolor at labore sit eu consequat sit accusam justo nobis sea takimata diam. Tempor diam dolore. Takimata et dolores sed kasd. Clita ea eu te amet lobortis qui diam commodo sed amet dolores invidunt dolor sed. Diam voluptua vulputate at et. Et elitr sit gubergren illum dolor sed minim diam sanctus ea gubergren sanctus no duo diam diam sit dolor. Sed sit erat accusam molestie invidunt aliquyam doming vero in justo ut eos. Amet diam ea ut vero diam ea dolore lorem consetetur dolor ad sea vel consetetur dolor lorem vel. Ut exerci ipsum dolor voluptua eos ea volutpat dolor elitr dolor liber aliquyam est ea aliquyam eum clita elitr. Facilisis sit doming sit ut justo elitr sed et luptatum et hendrerit at takimata accusam ipsum aliquyam sadipscing. Clita quod et dolor et ipsum. Et no elitr nobis et in takimata accusam dignissim eleifend. Vero vero vero ea accusam esse vel et kasd nulla eos amet consectetuer labore ea diam no congue. Lorem et ipsum stet aliquyam amet invidunt ea volutpat eleifend.\n', publishDate='2024-09-24T16:52:41.8257224+00:00'}]",
+  "statusTrace" : "java.lang.AssertionError: Expected object:\nGetBooksResponse{id=1, title='Book 1', description='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', pageCount=100, excerpt='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', publishDate='2024-09-23T18:13:02.9706647+00:00'}\nbut got:\nGetBooksResponse{id=1, title='Book 1', description='Facer volutpat nonumy nibh kasd sadipscing duo sea odio. Sea possim dolor diam amet eleifend dolor lorem. Consectetuer at eirmod ea aliquip est imperdiet et sanctus ut aliquam sanctus accusam sadipscing ad. Vel sadipscing dolor sit esse. Sed et sed nonummy aliquyam sea consetetur iriure et magna sadipscing feugiat est. Ipsum odio sanctus ut qui et clita takimata invidunt. Invidunt sit takimata aliquam sit takimata at dolore dolor ea labore duis liber accusam at. Voluptua amet sea dolor stet sea aliquyam stet velit esse eirmod labore et nostrud takimata duo. Diam dolor sit sit at consetetur invidunt at vulputate amet diam dolore ex amet sit amet wisi.\n', pageCount=100, excerpt='Lorem ut eirmod duis sed vel et stet et sed et at sea esse feugiat eu clita vero. Sit amet eos dolor iusto ad ipsum magna et et dolore labore vel magna nonumy aliquam. Nonumy ipsum consetetur euismod sadipscing minim et labore liber. Eu ea et ipsum eos at tempor. Consectetuer diam et duo et kasd stet labore nulla. Vero soluta sadipscing ipsum ea diam diam dolor rebum. At vel takimata erat duo no minim elit.\nIpsum no sadipscing ea. Eum molestie nonumy zzril dolore clita at takimata dolores kasd ipsum veniam commodo amet consetetur consequat. Clita nulla invidunt ea ipsum diam gubergren sea eum facilisis et dolore justo rebum consetetur sea magna dolor. Sit adipiscing dolore dignissim augue nostrud sea duo et kasd duo. Blandit duo et ipsum augue consetetur vero diam eum vulputate et tempor et sanctus sit. Dolor hendrerit soluta.\nEleifend et augue aliquyam. Te labore amet eos dolor sadipscing augue eu dignissim diam dolor dolores adipiscing stet sea sit duo te diam. Eirmod placerat sit. Et vero augue illum no dolor dolore nulla justo amet ipsum ut sed volutpat. Amet iriure invidunt et kasd qui erat aliquyam velit ullamcorper ut consectetuer sanctus. Labore sanctus justo voluptua tempor consectetuer consetetur stet consetetur accusam soluta lorem et lorem. Sed et et et est. Laoreet sit et dolor vulputate elitr sed no no enim molestie erat et labore sit labore no accumsan. Erat dignissim vel. Dolores diam duis rebum ut gubergren. Qui dolores dolor sit sed. Dolor vero aliquyam no dolores est consequat accusam ea at amet rebum.\nStet et magna voluptua et at sit eirmod amet voluptua nihil tation ipsum diam rebum et sed. Eos in vulputate ut consetetur. Clita et diam rebum dolor magna rebum ex velit ea nonumy lobortis et voluptua magna aliquip. Euismod erat dolor magna.\nEnim ullamcorper ad magna dolor no facilisis ut diam aliquyam et amet invidunt dolor. Dolores duis amet dolor at labore sit eu consequat sit accusam justo nobis sea takimata diam. Tempor diam dolore. Takimata et dolores sed kasd. Clita ea eu te amet lobortis qui diam commodo sed amet dolores invidunt dolor sed. Diam voluptua vulputate at et. Et elitr sit gubergren illum dolor sed minim diam sanctus ea gubergren sanctus no duo diam diam sit dolor. Sed sit erat accusam molestie invidunt aliquyam doming vero in justo ut eos. Amet diam ea ut vero diam ea dolore lorem consetetur dolor ad sea vel consetetur dolor lorem vel. Ut exerci ipsum dolor voluptua eos ea volutpat dolor elitr dolor liber aliquyam est ea aliquyam eum clita elitr. Facilisis sit doming sit ut justo elitr sed et luptatum et hendrerit at takimata accusam ipsum aliquyam sadipscing. Clita quod et dolor et ipsum. Et no elitr nobis et in takimata accusam dignissim eleifend. Vero vero vero ea accusam esse vel et kasd nulla eos amet consectetuer labore ea diam no congue. Lorem et ipsum stet aliquyam amet invidunt ea volutpat eleifend.\n', publishDate='2024-09-24T16:52:41.8257224+00:00'} expected [GetBooksResponse{id=1, title='Book 1', description='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', pageCount=100, excerpt='Lorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\nLorem lorem lorem. Lorem lorem lorem. Lorem lorem lorem.\n', publishDate='2024-09-23T18:13:02.9706647+00:00'}] but found [GetBooksResponse{id=1, title='Book 1', description='Facer volutpat nonumy nibh kasd sadipscing duo sea odio. Sea possim dolor diam amet eleifend dolor lorem. Consectetuer at eirmod ea aliquip est imperdiet et sanctus ut aliquam sanctus accusam sadipscing ad. Vel sadipscing dolor sit esse. Sed et sed nonummy aliquyam sea consetetur iriure et magna sadipscing feugiat est. Ipsum odio sanctus ut qui et clita takimata invidunt. Invidunt sit takimata aliquam sit takimata at dolore dolor ea labore duis liber accusam at. Voluptua amet sea dolor stet sea aliquyam stet velit esse eirmod labore et nostrud takimata duo. Diam dolor sit sit at consetetur invidunt at vulputate amet diam dolore ex amet sit amet wisi.\n', pageCount=100, excerpt='Lorem ut eirmod duis sed vel et stet et sed et at sea esse feugiat eu clita vero. Sit amet eos dolor iusto ad ipsum magna et et dolore labore vel magna nonumy aliquam. Nonumy ipsum consetetur euismod sadipscing minim et labore liber. Eu ea et ipsum eos at tempor. Consectetuer diam et duo et kasd stet labore nulla. Vero soluta sadipscing ipsum ea diam diam dolor rebum. At vel takimata erat duo no minim elit.\nIpsum no sadipscing ea. Eum molestie nonumy zzril dolore clita at takimata dolores kasd ipsum veniam commodo amet consetetur consequat. Clita nulla invidunt ea ipsum diam gubergren sea eum facilisis et dolore justo rebum consetetur sea magna dolor. Sit adipiscing dolore dignissim augue nostrud sea duo et kasd duo. Blandit duo et ipsum augue consetetur vero diam eum vulputate et tempor et sanctus sit. Dolor hendrerit soluta.\nEleifend et augue aliquyam. Te labore amet eos dolor sadipscing augue eu dignissim diam dolor dolores adipiscing stet sea sit duo te diam. Eirmod placerat sit. Et vero augue illum no dolor dolore nulla justo amet ipsum ut sed volutpat. Amet iriure invidunt et kasd qui erat aliquyam velit ullamcorper ut consectetuer sanctus. Labore sanctus justo voluptua tempor consectetuer consetetur stet consetetur accusam soluta lorem et lorem. Sed et et et est. Laoreet sit et dolor vulputate elitr sed no no enim molestie erat et labore sit labore no accumsan. Erat dignissim vel. Dolores diam duis rebum ut gubergren. Qui dolores dolor sit sed. Dolor vero aliquyam no dolores est consequat accusam ea at amet rebum.\nStet et magna voluptua et at sit eirmod amet voluptua nihil tation ipsum diam rebum et sed. Eos in vulputate ut consetetur. Clita et diam rebum dolor magna rebum ex velit ea nonumy lobortis et voluptua magna aliquip. Euismod erat dolor magna.\nEnim ullamcorper ad magna dolor no facilisis ut diam aliquyam et amet invidunt dolor. Dolores duis amet dolor at labore sit eu consequat sit accusam justo nobis sea takimata diam. Tempor diam dolore. Takimata et dolores sed kasd. Clita ea eu te amet lobortis qui diam commodo sed amet dolores invidunt dolor sed. Diam voluptua vulputate at et. Et elitr sit gubergren illum dolor sed minim diam sanctus ea gubergren sanctus no duo diam diam sit dolor. Sed sit erat accusam molestie invidunt aliquyam doming vero in justo ut eos. Amet diam ea ut vero diam ea dolore lorem consetetur dolor ad sea vel consetetur dolor lorem vel. Ut exerci ipsum dolor voluptua eos ea volutpat dolor elitr dolor liber aliquyam est ea aliquyam eum clita elitr. Facilisis sit doming sit ut justo elitr sed et luptatum et hendrerit at takimata accusam ipsum aliquyam sadipscing. Clita quod et dolor et ipsum. Et no elitr nobis et in takimata accusam dignissim eleifend. Vero vero vero ea accusam esse vel et kasd nulla eos amet consectetuer labore ea diam no congue. Lorem et ipsum stet aliquyam amet invidunt ea volutpat eleifend.\n', publishDate='2024-09-24T16:52:41.8257224+00:00'}]\n\tat org.testng.Assert.fail(Assert.java:111)\n\tat org.testng.Assert.failNotEquals(Assert.java:1578)\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:150)\n\tat org.testng.Assert.assertEquals(Assert.java:132)\n\tat utils.assertions.AssertionsUtils.assertItemMatches(AssertionsUtils.java:124)\n\tat tests.BooksTests.testBooksApiGetByID(BooksTests.java:79)\n\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\n\tat org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)\n\tat org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)\n\tat org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)\n\tat org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)\n\tat org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)\n\tat org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)\n\tat org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1597)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:739)\n\tat org.testng.TestRunner.run(TestRunner.java:614)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:421)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:312)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1208)\n\tat org.testng.TestNG.runSuites(TestNG.java:1112)\n\tat org.testng.TestNG.run(TestNG.java:1079)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:284)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:119)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setupConfig",
+    "time" : {
+      "start" : 1727283159620,
+      "stop" : 1727283159621,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setupBooksTestConfig",
+    "time" : {
+      "start" : 1727283159622,
+      "stop" : 1727283159625,
+      "duration" : 3
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1727283190451,
+      "stop" : 1727283190452,
+      "duration" : 1
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testClass",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "testMethod",
+    "value" : "testBooksApiGetByID"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Online bookstore tests"
+  }, {
+    "name" : "suite",
+    "value" : "Books tests"
+  }, {
+    "name" : "subSuite",
+    "value" : "tests.BooksTests"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1149-879"
+  }, {
+    "name" : "thread",
+    "value" : "1780@fv-az1149-879.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "story",
+    "value" : "US-007"
+  }, {
+    "name" : "feature",
+    "value" : "Get Book"
+  }, {
+    "name" : "epic",
+    "value" : "Books Management"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "apiVersion",
+    "value" : "v1"
+  }, {
+    "name" : "env",
+    "value" : "qa"
+  } ],
+  "links" : [ {
+    "name" : "DE-007",
+    "url" : "https://jira.example.com/browse/DE-007",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4af8d9a95caa7542.json",
+  "parameterValues" : [ "v1", "qa" ]
+}
